@@ -1,8 +1,24 @@
 [gd_scene format=3 uid="uid://b25h22lvjsu7g"]
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_tam23"]
+[ext_resource type="Texture2D" uid="uid://crw0mgkns4err" path="res://Sprites/Platform Placeholder.png" id="2_x8jwb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
+size = Vector2(291, 45)
 
 [node name="Testing ground" type="Node2D" unique_id=624825762]
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_tam23")]
 position = Vector2(593, 322)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=144584559]
+position = Vector2(609, 493)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1785331012]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_x8jwb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1243940576]
+position = Vector2(-1.5, 0.5)
+shape = SubResource("RectangleShape2D_3sy6q")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhe12wpmf6e60"
-path="res://.godot/imported/Spiller (Forward) Idle.png-c2e97a3b6a64417ff0f768ef146a894e.ctex"
+uid="uid://crw0mgkns4err"
+path="res://.godot/imported/Platform Placeholder.png-d0297efcc15bf93a449252bb2712cec1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Spiller (Forward) Idle.png"
-dest_files=["res://.godot/imported/Spiller (Forward) Idle.png-c2e97a3b6a64417ff0f768ef146a894e.ctex"]
+source_file="res://Sprites/Platform Placeholder.png"
+dest_files=["res://.godot/imported/Platform Placeholder.png-d0297efcc15bf93a449252bb2712cec1.ctex"]
 
 [params]
 
