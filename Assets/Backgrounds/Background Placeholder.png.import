@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://iscioqxwy3p2"
-path="res://.godot/imported/Spiller Walk.png-703e16a957734f783af522bf7effe95a.ctex"
+uid="uid://crqw5afk2f120"
+path="res://.godot/imported/Background Placeholder.png-9c04916910ab0f0c05f00ff6ea564405.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Spiller Walk.png"
-dest_files=["res://.godot/imported/Spiller Walk.png-703e16a957734f783af522bf7effe95a.ctex"]
+source_file="res://Assets/Backgrounds/Background Placeholder.png"
+dest_files=["res://.godot/imported/Background Placeholder.png-9c04916910ab0f0c05f00ff6ea564405.ctex"]
 
 [params]
 
