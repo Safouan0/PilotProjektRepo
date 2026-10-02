@@ -18,6 +18,10 @@ func _input(event: InputEvent):
 		if dialog_index < len(dialog_lines) - 1:
 			dialog_index += 1
 			process_line(parse_line(dialog_lines[dialog_index]))
+	if event.is_action_pressed("prev_line"):
+		if dialog_index >= 1 :
+			dialog_index -= 1
+			process_line(parse_line(dialog_lines[dialog_index]))
 	
 
 func parse_line(line: String) -> Dictionary:

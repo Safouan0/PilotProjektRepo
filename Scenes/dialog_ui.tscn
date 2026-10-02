@@ -3,6 +3,7 @@
 [ext_resource type="Theme" uid="uid://bxj6q8sshn717" path="res://Assets/Themes/DialogueTheme.tres" id="1_gsrxu"]
 [ext_resource type="LabelSettings" uid="uid://djlnb0h6hfas4" path="res://Assets/Themes/NameSettings.tres" id="2_3gjcu"]
 [ext_resource type="Script" uid="uid://cndhecogdwpec" path="res://Scripts/dialog_ui.gd" id="2_yqatb"]
+[ext_resource type="Script" uid="uid://bvp24hfr4pr78" path="res://Scripts/text_blib_player.gd" id="3_kymi5"]
 
 [sub_resource type="Theme" id="Theme_q8n66"]
 
@@ -19,6 +20,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_gsrxu")
 script = ExtResource("2_yqatb")
+
+[node name="TextBlibPlayer" type="AudioStreamPlayer" parent="." unique_id=2021645477]
+unique_name_in_owner = true
+script = ExtResource("3_kymi5")
 
 [node name="DialogBox" type="PanelContainer" parent="." unique_id=263938054]
 custom_minimum_size = Vector2(0, 150)
