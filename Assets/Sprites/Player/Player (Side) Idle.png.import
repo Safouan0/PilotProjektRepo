@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://oakpcake4cxs"
-path="res://.godot/imported/Angel Placeholder.png-bf34bcfa464cd2e3f05c236179647650.ctex"
+uid="uid://b3tpwiq1pndla"
+path="res://.godot/imported/Player (Side) Idle.png-92fb132ba312b28d360091be8087b01c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Angel Placeholder.png"
-dest_files=["res://.godot/imported/Angel Placeholder.png-bf34bcfa464cd2e3f05c236179647650.ctex"]
+source_file="res://Assets/Sprites/Player/Player (Side) Idle.png"
+dest_files=["res://.godot/imported/Player (Side) Idle.png-92fb132ba312b28d360091be8087b01c.ctex"]
 
 [params]
 

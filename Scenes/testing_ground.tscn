@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://b25h22lvjsu7g"]
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_tam23"]
-[ext_resource type="Texture2D" uid="uid://crw0mgkns4err" path="res://Sprites/Platform Placeholder.png" id="2_x8jwb"]
+[ext_resource type="Texture2D" uid="uid://crw0mgkns4err" path="res://Assets/Sprites/Platform Placeholder.png" id="2_x8jwb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
 size = Vector2(291, 45)

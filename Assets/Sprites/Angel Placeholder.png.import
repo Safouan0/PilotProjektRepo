@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrbwhg7ne5u8"
-path="res://.godot/imported/Spikes Placeholder.png-86ef841849fd9dac78fc8ba46bc9fd50.ctex"
+uid="uid://oakpcake4cxs"
+path="res://.godot/imported/Angel Placeholder.png-3c7eb3863e402119b3f638ae267cf7f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Spikes Placeholder.png"
-dest_files=["res://.godot/imported/Spikes Placeholder.png-86ef841849fd9dac78fc8ba46bc9fd50.ctex"]
+source_file="res://Assets/Sprites/Angel Placeholder.png"
+dest_files=["res://.godot/imported/Angel Placeholder.png-3c7eb3863e402119b3f638ae267cf7f7.ctex"]
 
 [params]
 

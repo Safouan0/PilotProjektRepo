@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3tpwiq1pndla"
-path="res://.godot/imported/Player (Side) Idle.png-9cd8b65db1aee72e736cdd6b82baed27.ctex"
+uid="uid://tss5grvft8l5"
+path="res://.godot/imported/Player Jump Placeholder.png-141e58ebb67ff2232548d8243cf9d5d7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Player/Player (Side) Idle.png"
-dest_files=["res://.godot/imported/Player (Side) Idle.png-9cd8b65db1aee72e736cdd6b82baed27.ctex"]
+source_file="res://Assets/Sprites/Player/Player Jump Placeholder.png"
+dest_files=["res://.godot/imported/Player Jump Placeholder.png-141e58ebb67ff2232548d8243cf9d5d7.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crqw5afk2f120"
-path="res://.godot/imported/Background Placeholder.png-c0e8c6faf570fd33b999a3a32f2f727b.ctex"
+uid="uid://cxrbwhg7ne5u8"
+path="res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Backgrounds/Background Placeholder.png"
-dest_files=["res://.godot/imported/Background Placeholder.png-c0e8c6faf570fd33b999a3a32f2f727b.ctex"]
+source_file="res://Assets/Sprites/Spikes Placeholder.png"
+dest_files=["res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"]
 
 [params]
 
