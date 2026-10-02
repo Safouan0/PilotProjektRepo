@@ -14,6 +14,7 @@ var current_shown_chars : int = 0
 func set_dialog(name: String, dialog: String):
 	speaker_name.text = name
 	dialog_text.text = dialog
+	current_shown_chars = 0
 	dialog_text.visible_ratio = 0.0
 	animate_text = true
 
@@ -33,4 +34,5 @@ func _process(delta):
 func change_line(line: String):
 	current_shown_chars = 0 
 	dialog_text.text = line 
+	dialog_text.visible_ratio = 0.0
 	animate_text = true
