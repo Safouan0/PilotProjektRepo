@@ -1,7 +1,7 @@
 [gd_resource type="Theme" format=3 uid="uid://bxj6q8sshn717"]
 
-[ext_resource type="FontFile" uid="uid://cb4ltl7vfa26y" path="res://Assets/LibreCaslonCondensed-Italic-VariableFont_wght.ttf" id="1_sqbec"]
-[ext_resource type="FontFile" uid="uid://b8qckiu3f7g74" path="res://Assets/LibreCaslonCondensed-VariableFont_wght.ttf" id="2_hhkya"]
+[ext_resource type="FontFile" uid="uid://cb4ltl7vfa26y" path="res://Assets/Fonts/LibreCaslonCondensed-Italic-VariableFont_wght.ttf" id="1_sqbec"]
+[ext_resource type="FontFile" uid="uid://b8qckiu3f7g74" path="res://Assets/Fonts/LibreCaslonCondensed-VariableFont_wght.ttf" id="2_hhkya"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j2q5q"]
 content_margin_left = 30.0

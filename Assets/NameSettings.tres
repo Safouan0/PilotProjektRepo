@@ -1,7 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://djlnb0h6hfas4"]
-
-[ext_resource type="FontFile" uid="uid://b8qckiu3f7g74" path="res://Assets/LibreCaslonCondensed-VariableFont_wght.ttf" id="1_dyt4g"]
-
-[resource]
-font = ExtResource("1_dyt4g")
-font_size = 25

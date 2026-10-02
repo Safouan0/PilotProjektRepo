@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cb4ltl7vfa26y"
-path="res://.godot/imported/LibreCaslonCondensed-Italic-VariableFont_wght.ttf-d0f8b6b440320753fea242261896c603.fontdata"
+path="res://.godot/imported/LibreCaslonCondensed-Italic-VariableFont_wght.ttf-45b135b1fa44ea1771f5d89b35301c78.fontdata"
 
 [deps]
 
-source_file="res://Assets/LibreCaslonCondensed-Italic-VariableFont_wght.ttf"
-dest_files=["res://.godot/imported/LibreCaslonCondensed-Italic-VariableFont_wght.ttf-d0f8b6b440320753fea242261896c603.fontdata"]
+source_file="res://Assets/Fonts/LibreCaslonCondensed-Italic-VariableFont_wght.ttf"
+dest_files=["res://.godot/imported/LibreCaslonCondensed-Italic-VariableFont_wght.ttf-45b135b1fa44ea1771f5d89b35301c78.fontdata"]
 
 [params]
 

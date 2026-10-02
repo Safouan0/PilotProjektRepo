@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://c57c4fyigw8va"]
 
-[ext_resource type="Theme" uid="uid://bxj6q8sshn717" path="res://Assets/DialogueTheme.tres" id="1_gsrxu"]
-[ext_resource type="LabelSettings" uid="uid://djlnb0h6hfas4" path="res://Assets/NameSettings.tres" id="2_3gjcu"]
+[ext_resource type="Theme" uid="uid://bxj6q8sshn717" path="res://Assets/Themes/DialogueTheme.tres" id="1_gsrxu"]
+[ext_resource type="LabelSettings" uid="uid://djlnb0h6hfas4" path="res://Assets/Themes/NameSettings.tres" id="2_3gjcu"]
+[ext_resource type="Script" uid="uid://cndhecogdwpec" path="res://Scripts/dialog_ui.gd" id="2_yqatb"]
 
 [sub_resource type="Theme" id="Theme_q8n66"]
 
-[node name="DialogueUI" type="Control" unique_id=435558196]
+[node name="DialogUI" type="Control" unique_id=435558196]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,8 +18,9 @@ offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_gsrxu")
+script = ExtResource("2_yqatb")
 
-[node name="DialogueBox" type="PanelContainer" parent="." unique_id=263938054]
+[node name="DialogBox" type="PanelContainer" parent="." unique_id=263938054]
 custom_minimum_size = Vector2(0, 150)
 layout_mode = 1
 anchors_preset = 12
@@ -28,7 +30,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="DialogueBox" unique_id=1042230857]
+[node name="DialogText" type="RichTextLabel" parent="DialogBox" unique_id=1042230857]
+unique_name_in_owner = true
 layout_mode = 2
 bbcode_enabled = true
 text = "[wave][i]This[/i] is a [shake]line of [b]dialogue[/b][/shake] [/wave]"
@@ -47,10 +50,12 @@ grow_vertical = 2
 theme = SubResource("Theme_q8n66")
 
 [node name="Polygon2D" type="Polygon2D" parent="SpeakerBox" unique_id=1742661033]
+position = Vector2(-1, 0)
 color = Color(0.29411766, 0.60784316, 0.7254902, 0.54901963)
 polygon = PackedVector2Array(0, 0, 180, 0, 200, 50, 0, 50)
 
-[node name="Label" type="Label" parent="SpeakerBox" unique_id=1382303480]
+[node name="SpeakerName" type="Label" parent="SpeakerBox" unique_id=1382303480]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://ca1tv43qfh631"]
 
-[ext_resource type="Texture2D" uid="uid://ch28eo11rv52" path="res://Sprites/Backgrounds/Placeholder.png" id="1_kninm"]
-[ext_resource type="PackedScene" uid="uid://c57c4fyigw8va" path="res://Scenes/dialogue_ui.tscn" id="2_y1tew"]
+[ext_resource type="Script" uid="uid://dmmuw76shvw27" path="res://Scripts/quiz.gd" id="1_fdxuh"]
+[ext_resource type="Texture2D" uid="uid://ch28eo11rv52" path="res://Assets/Backgrounds/Placeholder.png" id="1_kninm"]
+[ext_resource type="PackedScene" uid="uid://c57c4fyigw8va" path="res://Scenes/dialog_ui.tscn" id="2_y1tew"]
 
 [node name="Quiz" type="Node2D" unique_id=477676082]
+script = ExtResource("1_fdxuh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1013607065]
 
@@ -30,4 +32,5 @@ offset_right = 20.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="DialogueUI" parent="CanvasLayer2" unique_id=435558196 instance=ExtResource("2_y1tew")]
+[node name="DialogUI" parent="CanvasLayer2" unique_id=435558196 instance=ExtResource("2_y1tew")]
+unique_name_in_owner = true
