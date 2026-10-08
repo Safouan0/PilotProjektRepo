@@ -1,19 +1,43 @@
 [
-	{
-	"Speaker": "NAME1", 
-	"Text": "first line of dialogue."
+	{"Speaker": "NAME1", "Text": "first line of dialogue."},
+	
+	{"Speaker": "NAME1", "Text": "second line of dialogue."},
+	
+	
+	{ "choice": 
+		[
+			{"Text": "first choice", "goto": "first_choice"},
+			{"Text": "second choice", "goto": "second_choice"}
+		]
 	},
-	{
-	"Speaker": "NAME2", 
-	"Text": "second line of dialogue."
-	},
-	{
-	"Speaker": "NAME2", 
-	"Text": "third line of dialogue."
-	},
-	{
-	"Speaker": "NAME1", 
-	"Text": "fourth line of dialogue."
-	},
+	
+	
+	{"anchor": "first_choice"},
+	
+	{"Speaker": "Name1", "Text": "First choice dialogue 1"},
+	
+	{"Speaker": "Name1", "Text": "First choice dialogue 2"},
+	
+	{"goto": "post_choice"},
+	
+	
+	{"anchor": "second_choice"},
+	
+	{"Speaker": "Name1", "Text": "Second choice dialogue 1"},
+	
+	{"Speaker": "Name1", "Text": "Second choice dialogue 2"},
+	
+	{"goto": "post_choice"},
+	
+	
+	{"anchor": "post_choice"},
+	
+	{"Speaker": "Name1", "Text": "End dialogue 1"},
+	
+	{"Speaker": "Name1", "Text": "End dialogue 2"},
+	
+	
+	
+	
 	
 ]
