@@ -1,0 +1,19 @@
+[
+	{
+	"Speaker": "NAME1", 
+	"Text": "first line of dialogue."
+	},
+	{
+	"Speaker": "NAME2", 
+	"Text": "second line of dialogue."
+	},
+	{
+	"Speaker": "NAME2", 
+	"Text": "third line of dialogue."
+	},
+	{
+	"Speaker": "NAME1", 
+	"Text": "fourth line of dialogue."
+	},
+	
+]
