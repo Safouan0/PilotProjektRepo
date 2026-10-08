@@ -1,12 +1,8 @@
 [gd_scene format=4 uid="uid://b25h22lvjsu7g"]
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_tam23"]
-[ext_resource type="Texture2D" uid="uid://crw0mgkns4err" path="res://Assets/Sprites/Platform Placeholder.png" id="2_x8jwb"]
 [ext_resource type="Texture2D" uid="uid://se1i6uo7vqle" path="res://Assets/Sprites/world_tileset.png" id="3_1clf0"]
 [ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Tileset 7.png" id="4_dg8kd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
-size = Vector2(291, 45)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_1clf0")
@@ -205,6 +201,10 @@ texture = ExtResource("4_dg8kd")
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:3/0 = 0
 3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:4/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_3sy6q"]
 physics_layer_0/collision_layer = 1
@@ -213,31 +213,18 @@ sources/0 = SubResource("TileSetAtlasSource_0u5ym")
 [node name="Testing ground" type="Node2D" unique_id=624825762]
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_tam23")]
-position = Vector2(560, 195)
+position = Vector2(76, -69)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=144584559]
-position = Vector2(597, 564)
-metadata/_edit_group_ = true
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1785331012]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("2_x8jwb")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1243940576]
-position = Vector2(-1.5, 0.5)
-shape = SubResource("RectangleShape2D_3sy6q")
-
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=724271443]
-position = Vector2(607.5, 493.5)
+[node name="TileMapLayerFAKE" type="TileMapLayer" parent="." unique_id=724271443]
+position = Vector2(81.5, 22.5)
 scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAD5/wEAAAAFAAAAAAD6/wEAAAAFAAAAAAD7/wEAAAAFAAAAAAD8/wEAAAAFAAAAAAADAAEAAAAFAAAAAAAEAAEAAAAFAAAAAAAFAAEAAAAFAAAAAAAGAAEAAAAFAAAAAAAHAAEAAAAFAAAAAAAIAAEAAAAFAAAAAAAJAAEAAAAFAAAAAAAKAAEAAAAFAAAAAAALAAEAAAAFAAAAAAD4/wEAAAAFAAAAAAD3/wEAAAAFAAAAAAD2/wEAAAAFAAAAAAD1/wEAAAAFAAAAAAD0/wEAAAAFAAAAAAA=")
 tile_set = SubResource("TileSet_x8jwb")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1467817413]
-position = Vector2(607.5, 493.5)
-
-[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=271880839]
-position = Vector2(607.5, 493.5)
-scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAD+//3/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAD9//z/AAAAAAEAAAABAPz/AAACAAEAAAD9//3/AAAAAAMAAAABAP3/AAACAAMAAAA=")
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=271880839]
+position = Vector2(81.5, 22.5)
+tile_map_data = PackedByteArray("AAD+//3/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAD9//z/AAADAAEAAAABAPz/AAADAAEAAAD9//3/AAAAAAMAAAABAP3/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_3sy6q")

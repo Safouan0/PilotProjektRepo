@@ -4,8 +4,8 @@ using System.Runtime.CompilerServices;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -800.0f;
+	public const float Speed = 100.0f;
+	public const float JumpVelocity = -250.0f;
 
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
