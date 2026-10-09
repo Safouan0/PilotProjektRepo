@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Pilot Projekt"
-run/main_scene="uid://b25h22lvjsu7g"
+run/main_scene="uid://ca1tv43qfh631"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://Scripts/icon.svg"
 
