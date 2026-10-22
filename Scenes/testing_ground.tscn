@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_tam23"]
 [ext_resource type="Texture2D" uid="uid://se1i6uo7vqle" path="res://Assets/Sprites/world_tileset.png" id="3_1clf0"]
+[ext_resource type="Texture2D" uid="uid://dmgvwdq22hnlb" path="res://Assets/Backgrounds/Background 7.png" id="3_dg8kd"]
 [ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Tileset 7.png" id="4_dg8kd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
@@ -211,6 +212,11 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_0u5ym")
 
 [node name="Testing ground" type="Node2D" unique_id=624825762]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1818665123]
+position = Vector2(320, -175)
+scale = Vector2(2, 2)
+texture = ExtResource("3_dg8kd")
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_tam23")]
 position = Vector2(76, -69)
