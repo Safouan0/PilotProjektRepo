@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://5ij4hsprqpnm"]
 
 [ext_resource type="Texture2D" uid="uid://dbbc52y42w477" path="res://Assets/Sprites/Enemies/Circle saw 7.png" id="1_jp1mk"]
+[ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="2_4qbox"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qbox"]
 atlas = ExtResource("1_jp1mk")
@@ -66,8 +67,18 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Node2D" type="Node2D" unique_id=314821795]
+[sub_resource type="CircleShape2D" id="CircleShape2D_3sy6q"]
+radius = 13.0
+
+[node name="Saw" type="Node2D" unique_id=314821795]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=140946892]
 sprite_frames = SubResource("SpriteFrames_3sy6q")
-frame_progress = 0.13123505
+autoplay = "default"
+frame_progress = 0.4031259
+
+[node name="Killzone" parent="." unique_id=388960484 instance=ExtResource("2_4qbox")]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=355788198]
+shape = SubResource("CircleShape2D_3sy6q")

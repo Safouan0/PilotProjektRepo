@@ -10,10 +10,15 @@ public partial class Player : CharacterBody2D
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
 
+	private Camera2D camera;
+
     public override void _Ready()
     {
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
+        camera = GetNode<Camera2D>("Camera2D");
+        camera.ResetSmoothing();
+        camera.ForceUpdateScroll();
     }
 
 	public override void _PhysicsProcess(double delta)
