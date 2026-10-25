@@ -7,9 +7,11 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 100.0f;
 	public const float JumpVelocity = -250.0f;
 
+	public bool isDead = false;
+
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
-
+	
 	private Camera2D camera;
 
     public override void _Ready()
@@ -23,7 +25,13 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
+        if (isDead)
+        {
+            Velocity += GetGravity() * (float)delta;
+            MoveAndSlide();
+            return;
+        }
+        Vector2 velocity = Velocity;
 
 			 
 		// Add animation
