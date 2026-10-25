@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dnltg4t1g2ljf" path="res://Scenes/Spikes 9/spike_standalone_9.tscn" id="7_hv1bf"]
 [ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="9_33af5"]
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="10_aixd8"]
+[ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="10_kfgqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_hv1bf")
@@ -233,6 +234,9 @@ sources/1 = SubResource("TileSetScenesCollectionSource_78y3u")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
+size = Vector2(23, 22)
+
 [node name="Testing ground" type="Node2D" unique_id=624825762]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1818665123]
@@ -258,7 +262,7 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape2D_3sy6q")
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("10_aixd8")]
-position = Vector2(54, -60)
+position = Vector2(601, -341)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
 zoom = Vector2(3, 3)
@@ -268,3 +272,12 @@ limit_right = 640
 limit_bottom = 16
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="Winzone" parent="." unique_id=257492560 instance=ExtResource("10_kfgqd")]
+position = Vector2(664, -327)
+scale = Vector2(2, 2)
+collision_mask = 2
+NextScene = "res://Scenes/level 7.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=493597307]
+shape = SubResource("RectangleShape2D_3sy6q")
