@@ -37,7 +37,7 @@ func display_choices(choices: Array):
 		choice_button.text = choice["Text"]
 		
 		#connect button to choice_selected
-		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"]))
+		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"],choice.get("choice_points", 0)))
 		#add button
 		choice_list.add_child(choice_button)
 	#show the choice list
@@ -70,6 +70,6 @@ func change_line(line: String):
 	dialog_text.visible_ratio = 0.0
 	animate_text = true
 
-func _on_choice_button_pressed(anchor: String):
-	choice_selected.emit(anchor)
+func _on_choice_button_pressed(anchor: String, choice_points: int):
+	choice_selected.emit(anchor, choice_points)
 	choice_list.hide()
