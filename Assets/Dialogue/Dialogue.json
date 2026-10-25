@@ -1,4 +1,6 @@
 [
+	{"anchor": "first_level_quiz"},
+	
 	{"Speaker": "Engel", "Text": "Vær hilset Barnille"},
 	
 	{"Speaker": "Engel", "Text": "Du har nu kæmpet dig op fra den nederste ring af helvede, men du er ikke færdig endnu."},
@@ -7,7 +9,7 @@
 	
 	{"Speaker": "Engel", "Text": "Du bliver testet undervejs på din rejse, og hvis du bliver fundet værdig, så får du adgang til Paradis..."},
 	
-	{"Speaker": "Engel", "Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen"},
+	{"Speaker": "Engel", "Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen."},
 	
 	{"Speaker": "Engel", "Text": "Er du klar til den første test?..."},
 	
@@ -26,6 +28,7 @@
 		]
 	},
 	
+	
 	{"anchor": "retorisk1"},
 	
 	{"Speaker": "Engel", "Text": "Godt så! lad os gå igang."},
@@ -37,7 +40,7 @@
 	
 	{"Speaker": "Engel", "Text": "..."},
 	
-	{"Speaker": "Engel", "Text": "...Det var et retorisk spørgsmål du har ikke et valg"},
+	{"Speaker": "Engel", "Text": "...Det var et retorisk spørgsmål du har ikke et valg."},
 	
 	{"Speaker": "Engel", "Text": "Lad os gå igang!"},
 	
@@ -56,26 +59,25 @@
 	
 	{"Speaker": "Engel", "Text": "Hvordan forsætter du?"},
 	
-
 	{ "choice":
 		[
 			{
-			"Text": "Jeg forbander dem i Herrens navn og sørger for at deres puder altid er varme", 
+			"Text": "Jeg forbander dem i Herrens navn og sørger for at deres puder altid er varme.", 
 			"goto": "default_choice",
 			"choice_points": 10
 			},
 			{
-			"Text": "Jeg vender den anden kind til og går videre",
+			"Text": "Jeg vender den anden kind til og går videre.",
 			"goto": "default_choice",
 			"choice_points": -20
 			},
 			{
-			"Text": "Jeg samler en sten op og kaster den efter dem", 
+			"Text": "Jeg samler en sten op og kaster den efter dem.", 
 			"goto": "default_choice",
 			"choice_points": 20
 			},
 			{
-			"Text": "Jeg forbander dem i Herrens navn og to bjørne lemlester alle 41 børn", 
+			"Text": "Jeg forbander dem i Herrens navn og to bjørne lemlester alle 41 børn.", 
 			"goto": "default_choice",
 			"choice_points": 50
 			},
@@ -88,7 +90,7 @@
 	
 	{"Speaker": "Engel", "Text": "Hmmm interesant..."},
 	
-	{"Speaker": "Engel", "Text": "... Meget interesant"},
+	{"Speaker": "Engel", "Text": "... Meget interesant."},
 	
 	{"goto": "post_1_choice"},
 	
@@ -98,13 +100,150 @@
 
 	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den første test."},
 	
-	{"Speaker": "Name1", "Text": "Du får resultatet af din værdi, når du står for enden af den rejse"},
+	{"Speaker": "Name1", "Text": "Du får resultatet af din værdi, når du står for enden af den rejse."},
 	
-	{"Speaker": "Name1", "Text": "Indtil næste gang"},
+	{"Speaker": "Name1", "Text": "Indtil næste gang."},
 	
 	{"goto": "second_level_quiz"},
 	
 	
 	
+	{"anchor": "second_level_quiz"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet frem til den anden test."},
 	
+	{"Speaker": "Engel", "Text": "Jeg behøver ikke at spørge dig om du er klar vel?..."},
+	
+	{"Speaker": "Engel", "Text": "Nej det tænkte jeg nok"},
+	
+	{"Speaker": "Engel", "Text": "Godt så, lad os begynde..."},	
+	
+	{"Speaker": "Engel", "Text": "To mænd sidder med klaprende tænder på en kold og bar mark"},
+	
+	{"Speaker": "Engel", "Text": "De har to fyrbækker i tasken og noget røgelse til at gøre ild med"},
+	
+	{"Speaker": "Engel", "Text": "Dog har Gud forbudt dem at tænde ild"},
+	
+	{"Speaker": "Engel", "Text": "De tænder op for ilden og røgelsen"},
+	
+	{"Speaker": "Engel", "Text": "Hvad er en passende straf?"},
+	
+	{ "choice":
+		[
+			{
+			"Text": "Da det er forbudt at tænde ild, begynder det at storme og ilden går ud ", 
+			"goto": "default_choice2",
+			"choice_points": 20
+			},
+			{
+			"Text": "Det er en kold nat; de får lov til at tænde ilden for at holde sig varme",
+			"goto": "default_choice2",
+			"choice_points": -20
+			},
+			{
+			"Text": "De vidste godt de ikke måtte, så ilden vokser sig stor og fortærer dem levende", 
+			"goto": "default_choice2",
+			"choice_points": 50
+			},
+			{
+			"Text": "Banditter i nærheden opdager ilden. De bliver berøvet for alt hvad de ejer", 
+			"goto": "default_choice2",
+			"choice_points": 50
+			},
+		]
+	},
+	
+	{"anchor": "default_choice2"},
+	
+	{"Speaker": "Engel", "Text": "Hmmm interesant..."},
+	
+	{"Speaker": "Engel", "Text": "... Meget interesant"},
+	
+	{"Speaker": "Engel", "Text": "En vej til din sjæl begynder at vise sig..."},
+	
+	{"goto": "post_2_choice"},
+	
+	
+	
+	{"anchor": "post_2_choice"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den anden test."},
+	
+	{"Speaker": "Engel", "Text": "Lad vær med at fejle..."},
+	
+	{"Speaker": "Name1", "Text": "Indtil næste gang"},
+	
+	{"goto": "third_level_quiz"},
+	
+	
+	
+	{"anchor": "third_level_quiz"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet frem til den tredje test."},
+	
+	{"Speaker": "Engel", "Text": "Har rejsen været behagelig indtil videre?"},
+	
+	{"Speaker": "Engel", "Text": "Bahh nok ikke vel?"},
+	
+	{"Speaker": "Engel", "Text": "Lad os skynde os videre så"},
+	
+	{"Speaker": "Engel", "Text": "Du kender dealen."},
+	
+	{"Speaker": "Engel", "Text": "Du får et scenearie, og alt efter hvad du svarer bliver du bedømt i Guds øjne"},
+	
+	{"Speaker": "Engel", "Text": "Dine loyale soldater og mænd er netop i gang med at bære din ark gennem landet"},
+	
+	{"Speaker": "Engel", "Text": "Der er fest og sang i dit navn"},
+	
+	{"Speaker": "Engel", "Text": "En af soldaterne går opmærksomt ved siden af arken "},
+	
+	{"Speaker": "Engel", "Text": "Netop som han kigger snubler oksen der bærer vognen med arken "},
+	
+	{"Speaker": "Engel", "Text": "Arken tilter mod vejen, og for at redde den sætter han en hånd på den"},
+	
+	{"Speaker": "Engel", "Text": "Dette er selvom du har forbudt nogen af røre arken"},
+	
+	{"Speaker": "Engel", "Text": "Hvordan dømmer du situationen?"},
+	
+	
+	{ "choice":
+		[
+			{
+			"Text": "Du belønner den loyale soldat med godt held resten af livet, for at rede arken", 
+			"goto": "default_choice3",
+			"choice_points": -20
+			},
+			{
+			"Text": "Han er loyal, men han rørte ved arken. Du forbrænder den hånd der rørte arken",
+			"goto": "default_choice3",
+			"choice_points": 30
+			},
+			{
+			"Text": "Han vidste bedre end at røre ved din ark, du brænder ham op på stedet", 
+			"goto": "default_choice3",
+			"choice_points": 50
+			},
+		
+		]
+	},
+	
+	{"anchor": "default_choice3"},
+	
+	{"Speaker": "Engel", "Text": "Ahh ja.. Klassisk"},
+	
+	{"Speaker": "Engel", "Text": "Du viser hvem du er for hvert dilemma"},
+	
+	{"goto": "post_3_choice"},
+	
+	
+	
+	{"anchor": "post_3_choice"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den tredje test."},
+	
+	{"Speaker": "Engel", "Text": "Du er 1/3 af vejen"},
+	
+	{"Speaker": "Name1", "Text": "Så længe vandrerer"},
+	
+	{"goto": "fourth_level_quiz"},
 ]
