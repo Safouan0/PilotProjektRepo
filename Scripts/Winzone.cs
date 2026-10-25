@@ -32,8 +32,7 @@ public partial class Winzone : Area2D
 
     public void OnTimerTimeout()
     {
-
-       
+        GD.Load<GDScript>("res://Scripts/quiz.gd").Set("has_completed_quiz", false);
         GetTree().ChangeSceneToFile(NextScene);
 
     }

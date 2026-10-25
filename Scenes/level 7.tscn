@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://cqparg3ictxm6" path="res://Scenes/Spikes 7/spike_middle_7.tscn" id="8_6n88e"]
 [ext_resource type="PackedScene" uid="uid://ddtbod7gq8b8o" path="res://Scenes/Spikes 7/spike_left_7.tscn" id="9_wxqbd"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="11_n4mrr"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="12_mbr47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_1clf0")
@@ -276,3 +277,5 @@ NextScene = "res://Scenes/level 7.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=2138267394]
 shape = SubResource("RectangleShape2D_3sy6q")
+
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("12_mbr47")]

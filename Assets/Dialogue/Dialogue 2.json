@@ -1,0 +1,69 @@
+[
+	{"anchor": "second_level_quiz"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet frem til den anden test."},
+	
+	{"Speaker": "Engel", "Text": "Jeg behøver ikke at spørge dig om du er klar vel?..."},
+	
+	{"Speaker": "Engel", "Text": "Nej det tænkte jeg nok"},
+	
+	{"Speaker": "Engel", "Text": "Godt så, lad os begynde..."},	
+	
+	{"Speaker": "Engel", "Text": "To mænd sidder med klaprende tænder på en kold og bar mark"},
+	
+	{"Speaker": "Engel", "Text": "De har to fyrbækker i tasken og noget røgelse til at gøre ild med"},
+	
+	{"Speaker": "Engel", "Text": "Dog har Gud forbudt dem at tænde ild"},
+	
+	{"Speaker": "Engel", "Text": "De tænder op for ilden og røgelsen"},
+	
+	{"Speaker": "Engel", "Text": "Hvad er en passende straf?"},
+	
+	{ "choice":
+		[
+			{
+			"Text": "Da det er forbudt at tænde ild, begynder det at storme og ilden går ud ", 
+			"goto": "default_choice2",
+			"choice_points": 20
+			},
+			{
+			"Text": "Det er en kold nat; de får lov til at tænde ilden for at holde sig varme",
+			"goto": "default_choice2",
+			"choice_points": -20
+			},
+			{
+			"Text": "De vidste godt de ikke måtte, så ilden vokser sig stor og fortærer dem levende", 
+			"goto": "default_choice2",
+			"choice_points": 50
+			},
+			{
+			"Text": "Banditter i nærheden opdager ilden. De bliver berøvet for alt hvad de ejer", 
+			"goto": "default_choice2",
+			"choice_points": 50
+			},
+		]
+	},
+	
+	{"anchor": "default_choice2"},
+	
+	{"Speaker": "Engel", "Text": "Hmmm interesant..."},
+	
+	{"Speaker": "Engel", "Text": "... Meget interesant"},
+	
+	{"Speaker": "Engel", "Text": "En vej til din sjæl begynder at vise sig..."},
+	
+	{"goto": "post_2_choice"},
+	
+	
+	
+	{"anchor": "post_2_choice"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den anden test."},
+	
+	{"Speaker": "Engel", "Text": "Lad vær med at fejle..."},
+	
+	{"Speaker": "Name1", "Text": "Indtil næste gang"},
+	
+	{"goto": "third_level_quiz"},
+	
+]
