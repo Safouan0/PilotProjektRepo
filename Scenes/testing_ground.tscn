@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://crw0mgkns4err" path="res://Assets/Sprites/Platform Placeholder.png" id="2_x8jwb"]
 [ext_resource type="Texture2D" uid="uid://se1i6uo7vqle" path="res://Assets/Sprites/world_tileset.png" id="3_1clf0"]
 [ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Tileset 7.png" id="4_dg8kd"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="5_0u5ym"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
 size = Vector2(291, 45)
@@ -187,3 +188,5 @@ position = Vector2(607.5, 493.5)
 scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAD+//3/AAABAAAAAAD///3/AAABAAAAAAAAAP3/AAABAAAAAAD9//z/AAAAAAEAAAABAPz/AAACAAEAAAD9//3/AAAAAAMAAAABAP3/AAACAAMAAAA=")
 tile_set = SubResource("TileSet_3sy6q")
+
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("5_0u5ym")]

@@ -8,6 +8,7 @@
 script = ExtResource("1_fdxuh")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1013607065]
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=565017470]
 anchors_preset = 15
