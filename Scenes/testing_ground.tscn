@@ -2,14 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_tam23"]
 [ext_resource type="Texture2D" uid="uid://se1i6uo7vqle" path="res://Assets/Sprites/world_tileset.png" id="3_1clf0"]
-[ext_resource type="Texture2D" uid="uid://dmgvwdq22hnlb" path="res://Assets/Backgrounds/Background 7.png" id="3_dg8kd"]
-[ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Tileset 7.png" id="4_dg8kd"]
+[ext_resource type="Texture2D" uid="uid://dmgvwdq22hnlb" path="res://Assets/Sprites/Levels/Level 7/Background 7.png" id="3_dg8kd"]
+[ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Levels/Level 7/Tileset 7.png" id="4_dg8kd"]
 [ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="5_0u5ym"]
-[ext_resource type="PackedScene" uid="uid://prc8w1frgfmr" path="res://Scenes/Spikes/spike_standalone.tscn" id="6_k0nfe"]
+[ext_resource type="PackedScene" uid="uid://prc8w1frgfmr" path="res://Scenes/Spikes 7/spike_standalone_7.tscn" id="6_k0nfe"]
 [ext_resource type="PackedScene" uid="uid://5ij4hsprqpnm" path="res://Scenes/saw.tscn" id="6_wyk58"]
-[ext_resource type="PackedScene" uid="uid://dmsgueksdlh2u" path="res://Scenes/Spikes/spike_right.tscn" id="7_3rkbw"]
-[ext_resource type="PackedScene" uid="uid://cqparg3ictxm6" path="res://Scenes/Spikes/spike_middle.tscn" id="8_6n88e"]
-[ext_resource type="PackedScene" uid="uid://ddtbod7gq8b8o" path="res://Scenes/Spikes/spike_left.tscn" id="9_wxqbd"]
+[ext_resource type="PackedScene" uid="uid://dmsgueksdlh2u" path="res://Scenes/Spikes 7/spike_right_7.tscn" id="7_3rkbw"]
+[ext_resource type="PackedScene" uid="uid://cqparg3ictxm6" path="res://Scenes/Spikes 7/spike_middle_7.tscn" id="8_6n88e"]
+[ext_resource type="PackedScene" uid="uid://ddtbod7gq8b8o" path="res://Scenes/Spikes 7/spike_left_7.tscn" id="9_wxqbd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_1clf0")
@@ -236,18 +236,6 @@ texture = ExtResource("3_dg8kd")
 [node name="Saw" parent="." unique_id=314821795 instance=ExtResource("6_wyk58")]
 position = Vector2(160, -270)
 
-[node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_tam23")]
-position = Vector2(76, -69)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
-zoom = Vector2(3, 3)
-limit_left = 0
-limit_top = -368
-limit_right = 640
-limit_bottom = 16
-limit_smoothed = true
-position_smoothing_enabled = true
-
 [node name="TileMapLayerFAKE" type="TileMapLayer" parent="." unique_id=724271443]
 position = Vector2(81.5, 22.5)
 scale = Vector2(3, 3)
@@ -264,3 +252,15 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=638459867]
 shape = SubResource("WorldBoundaryShape2D_3sy6q")
+
+[node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_tam23")]
+position = Vector2(76, -69)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = -368
+limit_right = 640
+limit_bottom = 16
+limit_smoothed = true
+position_smoothing_enabled = true

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://prc8w1frgfmr"]
 
-[ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Tileset 7.png" id="1_v7xwp"]
+[ext_resource type="Texture2D" uid="uid://bcpkiegfrnxwi" path="res://Assets/Sprites/Levels/Level 7/Tileset 7.png" id="1_v7xwp"]
 [ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="2_k2we0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3sy6q"]

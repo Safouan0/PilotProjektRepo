@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrbwhg7ne5u8"
-path="res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"
+uid="uid://bcpkiegfrnxwi"
+path="res://.godot/imported/Tileset 7.png-eaa043c19225525c4bd7e394860a0c9c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Spikes Placeholder.png"
-dest_files=["res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"]
+source_file="res://Assets/Sprites/Levels/Level 7/Tileset 7.png"
+dest_files=["res://.godot/imported/Tileset 7.png-eaa043c19225525c4bd7e394860a0c9c.ctex"]
 
 [params]
 
