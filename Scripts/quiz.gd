@@ -4,6 +4,7 @@ extends Node2D
 
 var dialog_index : int = 0
 var dialog_lines: Array = []
+var score: int = 0
 
 func _ready() -> void:
 	#load dialogue
@@ -80,6 +81,7 @@ func process_line() -> void:
 	if line.has("choice"):
 		#display choices
 		dialog_ui.display_choices(line["choice"])
+		
 	else:
 		#reads line. 
 		dialog_ui.set_dialog(line["Speaker"],line["Text"])
@@ -93,6 +95,12 @@ func get_anchor_pos(anchor: String):
 	printerr("Error: Could not finde anchor: '" + anchor +"'")
 	return -1
 	
-func _on_choice_selected(anchor: String):
+func _on_choice_selected(anchor: String, choice_points: int):
+	#points from choice
+	score += choice_points
+	
+	print("points earned", choice_points)
+	print("points total", score)
+	#anchor pos
 	dialog_index = get_anchor_pos(anchor)
 	process_line()

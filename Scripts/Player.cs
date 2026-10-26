@@ -10,11 +10,11 @@ public partial class Player : CharacterBody2D
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
 
-    public override void _Ready()
-    {
+	public override void _Ready()
+	{
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
-    }
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
@@ -24,10 +24,10 @@ public partial class Player : CharacterBody2D
 		// Add animation
 		if (!IsOnFloor())
 		{
-            animatedSprite.Animation = "Jumping";
+			animatedSprite.Animation = "Jumping";
 
-        }
-        else if (velocity.X > 0 || velocity.X < 0)
+		}
+		else if (velocity.X > 0 || velocity.X < 0)
 		{
 			animatedSprite.Animation = "Walk";
 		}
@@ -71,8 +71,8 @@ public partial class Player : CharacterBody2D
 			animatedSprite.FlipH = false;
 		} else if (direction.X == -1)
 		{
-            animatedSprite.FlipH = true;
-        }
+			animatedSprite.FlipH = true;
+		}
 
 	}
 }

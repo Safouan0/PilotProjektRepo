@@ -37,7 +37,7 @@ func display_choices(choices: Array):
 		choice_button.text = choice["Text"]
 		
 		#connect button to choice_selected
-		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"]))
+		choice_button.pressed.connect(_on_choice_button_pressed.bind(choice["goto"],choice.get("choice_points", 0)))
 		#add button
 		choice_list.add_child(choice_button)
 	#show the choice list
@@ -50,14 +50,17 @@ func set_dialog(name: String, dialog: String):
 	current_shown_chars = 0
 	dialog_text.visible_ratio = 0.0
 	animate_text = true
-
+#håndterer dialog teksten og animationen
 func _process(delta):
 	if animate_text:
+		
 		if dialog_text.visible_ratio < 1:
 			dialog_text.visible_ratio += (1.0/dialog_text.text.length())*(ANIMATION_SPEED * delta)
+			
 			if dialog_text.visible_characters > current_shown_chars:
 				current_shown_chars = dialog_text.visible_characters
 				var last_char = dialog_text.text[current_shown_chars-1]
+				
 				if last_char not in NO_SOUND_CHARS:
 					text_blib_player.play_sound()
 		else:
@@ -70,6 +73,6 @@ func change_line(line: String):
 	dialog_text.visible_ratio = 0.0
 	animate_text = true
 
-func _on_choice_button_pressed(anchor: String):
-	choice_selected.emit(anchor)
+func _on_choice_button_pressed(anchor: String, choice_points: int):
+	choice_selected.emit(anchor, choice_points)
 	choice_list.hide()
