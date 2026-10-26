@@ -2,13 +2,27 @@ extends Node2D
 
 @onready var dialog_ui = %DialogUI
 
+static var has_completed_quiz = false
+
+@export 
+var dialog_path = ""
+
 var dialog_index : int = 0
 var dialog_lines: Array = []
 var score: int = 0
 
 func _ready() -> void:
+	
+	
+	if has_completed_quiz:
+		queue_free() 
+		return
+	
+	
+	load("res://Scripts/Player.cs").SetHasCompletedQuiz(false)
+	
 	#load dialogue
-	dialog_lines = load_dialog("res://Assets/Dialogue/Dialogue.json")
+	dialog_lines = load_dialog(dialog_path)
 	
 	#choice selected
 	dialog_ui.choice_selected.connect(_on_choice_selected)
@@ -76,6 +90,13 @@ func process_line() -> void:
 	if line.has("anchor"):
 		dialog_index += 1
 		process_line()
+		return
+		
+	if line.has("endQuiz"):
+		print("Yoo we ended")
+		has_completed_quiz = true
+		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
+		queue_free()
 		return
 		
 	if line.has("choice"):

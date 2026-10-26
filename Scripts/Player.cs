@@ -4,21 +4,38 @@ using System.Runtime.CompilerServices;
 
 public partial class Player : CharacterBody2D
 {
-	public const float Speed = 300.0f;
-	public const float JumpVelocity = -800.0f;
+	public const float Speed = 100.0f;
+	public const float JumpVelocity = -250.0f;
+
+	static public bool hasCompletedQuiz = true;
+
+
+    public bool isDead = false;
 
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
+	
+	private Camera2D camera;
 
 	public override void _Ready()
 	{
+  
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
-	}
+    camera = GetNode<Camera2D>("Camera2D");
+    camera.ResetSmoothing();
+    camera.ForceUpdateScroll();
+  }
 
 	public override void _PhysicsProcess(double delta)
 	{
-		Vector2 velocity = Velocity;
+        if (isDead || !hasCompletedQuiz)
+        {
+            Velocity += GetGravity() * (float)delta;
+            MoveAndSlide();
+            return;
+        }
+        Vector2 velocity = Velocity;
 
 			 
 		// Add animation
@@ -75,4 +92,10 @@ public partial class Player : CharacterBody2D
 		}
 
 	}
+
+	public static void SetHasCompletedQuiz(bool input)
+	{
+		hasCompletedQuiz = input;
+	}
+
 }

@@ -1,0 +1,71 @@
+[
+	{"anchor": "third_level_quiz"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet frem til den tredje test."},
+	
+	{"Speaker": "Engel", "Text": "Har rejsen været behagelig indtil videre?"},
+	
+	{"Speaker": "Engel", "Text": "Bahh nok ikke vel?"},
+	
+	{"Speaker": "Engel", "Text": "Lad os skynde os videre så"},
+	
+	{"Speaker": "Engel", "Text": "Du kender dealen."},
+	
+	{"Speaker": "Engel", "Text": "Du får et scenearie, og alt efter hvad du svarer bliver du bedømt i Guds øjne"},
+	
+	{"Speaker": "Engel", "Text": "Dine loyale soldater og mænd er netop i gang med at bære din ark gennem landet"},
+	
+	{"Speaker": "Engel", "Text": "Der er fest og sang i dit navn"},
+	
+	{"Speaker": "Engel", "Text": "En af soldaterne går opmærksomt ved siden af arken "},
+	
+	{"Speaker": "Engel", "Text": "Netop som han kigger snubler oksen der bærer vognen med arken "},
+	
+	{"Speaker": "Engel", "Text": "Arken tilter mod vejen, og for at redde den sætter han en hånd på den"},
+	
+	{"Speaker": "Engel", "Text": "Dette er selvom du har forbudt nogen af røre arken"},
+	
+	{"Speaker": "Engel", "Text": "Hvordan dømmer du situationen?"},
+	
+	
+	{ "choice":
+		[
+			{
+			"Text": "Du belønner den loyale soldat med godt held resten af livet, for at rede arken", 
+			"goto": "default_choice3",
+			"choice_points": -20
+			},
+			{
+			"Text": "Han er loyal, men han rørte ved arken. Du forbrænder den hånd der rørte arken",
+			"goto": "default_choice3",
+			"choice_points": 30
+			},
+			{
+			"Text": "Han vidste bedre end at røre ved din ark, du brænder ham op på stedet", 
+			"goto": "default_choice3",
+			"choice_points": 50
+			},
+		
+		]
+	},
+	
+	{"anchor": "default_choice3"},
+	
+	{"Speaker": "Engel", "Text": "Ahh ja.. Klassisk"},
+	
+	{"Speaker": "Engel", "Text": "Du viser hvem du er for hvert dilemma"},
+	
+	{"goto": "post_3_choice"},
+	
+	
+	
+	{"anchor": "post_3_choice"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den tredje test."},
+	
+	{"Speaker": "Engel", "Text": "Du er 1/3 af vejen"},
+	
+	{"Speaker": "Name1", "Text": "Så længe vandrerer"},
+	
+	{"goto": "fourth_level_quiz"},
+]

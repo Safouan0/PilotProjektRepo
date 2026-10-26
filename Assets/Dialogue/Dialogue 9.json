@@ -1,0 +1,109 @@
+[
+	{"anchor": "first_level_quiz"},
+	
+	{"Speaker": "Engel", "Text": "Vær hilset Barnille"},
+	
+	{"Speaker": "Engel", "Text": "Du har nu kæmpet dig op fra den nederste ring af helvede, men du er ikke færdig endnu."},
+	
+	{"Speaker": "Engel", "Text": "For at komme hjem skal du først igennem alle ni ringe af helvede, og bevise dit værd på vejen."},
+	
+	{"Speaker": "Engel", "Text": "Du bliver testet undervejs på din rejse, og hvis du bliver fundet værdig, så får du adgang til Paradis..."},
+	
+	{"Speaker": "Engel", "Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen."},
+	
+	{"Speaker": "Engel", "Text": "Er du klar til den første test?..."},
+	
+	{ "choice":
+		[
+			{
+			"Text": "Ja!", 
+			"goto": "retorisk1",
+			"choice_points": 0
+			},
+			{
+			"Text": "Nej!",
+			"goto": "retorisk2",
+			"choice_points": 0
+			}
+		]
+	},
+	
+	
+	{"anchor": "retorisk1"},
+	
+	{"Speaker": "Engel", "Text": "Godt så! lad os gå igang."},
+	
+	{"goto": "post_retorisk"},
+	
+	
+	{"anchor": "retorisk2"},
+	
+	{"Speaker": "Engel", "Text": "..."},
+	
+	{"Speaker": "Engel", "Text": "...Det var et retorisk spørgsmål du har ikke et valg."},
+	
+	{"Speaker": "Engel", "Text": "Lad os gå igang!"},
+	
+	{"goto": "post_retorisk"},
+	
+	
+	{"anchor": "post_retorisk"},
+	
+	{"Speaker": "Engel", "Text": "Efter en lang dag på din rejse, ser du endeligt synet af Betel i horisonten."},
+	
+	{"Speaker": "Engel", "Text": "Du fryder dig, da du har ventet længe på en dejlig seng at sove i."},
+	
+	{"Speaker": "Engel", "Text": "Da du nærmer dig byen, gør en flok drenge sig synlige på bymuren."},
+	
+	{"Speaker": "Engel", "Text": "De råber efter dig 'Kom herop, skaldepande, kom herop' "},
+	
+	{"Speaker": "Engel", "Text": "Hvordan forsætter du?"},
+	
+	{ "choice":
+		[
+			{
+			"Text": "Jeg forbander dem i Herrens navn og sørger for at deres puder altid er varme.", 
+			"goto": "default_choice",
+			"choice_points": 10
+			},
+			{
+			"Text": "Jeg vender den anden kind til og går videre.",
+			"goto": "default_choice",
+			"choice_points": -20
+			},
+			{
+			"Text": "Jeg samler en sten op og kaster den efter dem.", 
+			"goto": "default_choice",
+			"choice_points": 20
+			},
+			{
+			"Text": "Jeg forbander dem i Herrens navn og to bjørne lemlester alle 41 børn.", 
+			"goto": "default_choice",
+			"choice_points": 50
+			},
+		]
+	},
+	
+	
+	
+	{"anchor": "default_choice"},
+	
+	{"Speaker": "Engel", "Text": "Hmmm interesant..."},
+	
+	{"Speaker": "Engel", "Text": "... Meget interesant."},
+	
+	{"goto": "post_1_choice"},
+	
+	
+	
+	{"anchor": "post_1_choice"},
+
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den første test."},
+	
+	{"Speaker": "Engel", "Text": "Du får resultatet af din værdi, når du står for enden af den rejse."},
+	
+	{"Speaker": "Engel", "Text": "Indtil næste gang."},
+	
+	{"endQuiz": "endQuiz"},
+	
+]

@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d2bea7nca4diq"]
+
+[ext_resource type="Script" uid="uid://bjurov75i484e" path="res://Scripts/Winzone.cs" id="1_yeyrn"]
+
+[node name="Winzone" type="Area2D" unique_id=257492560]
+script = ExtResource("1_yeyrn")
+
+[node name="Timer" type="Timer" parent="." unique_id=483231434]
+wait_time = 0.6
+one_shot = true

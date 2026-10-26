@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxrbwhg7ne5u8"
-path="res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"
+uid="uid://dbbc52y42w477"
+path="res://.godot/imported/Circle saw 7.png-ce2eb9b450c489225d08d5437e0ec638.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Spikes Placeholder.png"
-dest_files=["res://.godot/imported/Spikes Placeholder.png-2022c5b0d0d47905f8de138fee0f5dd4.ctex"]
+source_file="res://Assets/Sprites/Levels/Level 7/Circle saw 7.png"
+dest_files=["res://.godot/imported/Circle saw 7.png-ce2eb9b450c489225d08d5437e0ec638.ctex"]
 
 [params]
 

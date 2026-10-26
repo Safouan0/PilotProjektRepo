@@ -11,12 +11,14 @@ config_version=5
 [application]
 
 config/name="Pilot Projekt"
-run/main_scene="uid://ca1tv43qfh631"
+run/main_scene="uid://gxc2t2acv3wc"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://Scripts/icon.svg"
 
 [display]
 
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -71,7 +73,6 @@ jump={
 [physics]
 
 3d/physics_engine="Jolt Physics"
-2d/default_gravity=2500.0
 
 [rendering]
 

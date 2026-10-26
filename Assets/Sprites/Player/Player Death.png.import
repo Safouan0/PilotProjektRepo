@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crw0mgkns4err"
-path="res://.godot/imported/Platform Placeholder.png-3de08b82cd80f268837b7dd78a0a1acb.ctex"
+uid="uid://dbt1504ul15iv"
+path="res://.godot/imported/Player Death.png-14231dca980b9c25d7dde67bc3b718b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Platform Placeholder.png"
-dest_files=["res://.godot/imported/Platform Placeholder.png-3de08b82cd80f268837b7dd78a0a1acb.ctex"]
+source_file="res://Assets/Sprites/Player/Player Death.png"
+dest_files=["res://.godot/imported/Player Death.png-14231dca980b9c25d7dde67bc3b718b7.ctex"]
 
 [params]
 
