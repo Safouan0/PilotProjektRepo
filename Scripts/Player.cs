@@ -7,7 +7,10 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 100.0f;
 	public const float JumpVelocity = -250.0f;
 
-	public bool isDead = false;
+	static public bool hasCompletedQuiz = true;
+
+
+    public bool isDead = false;
 
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
@@ -25,7 +28,7 @@ public partial class Player : CharacterBody2D
 
 	public override void _PhysicsProcess(double delta)
 	{
-        if (isDead)
+        if (isDead || !hasCompletedQuiz)
         {
             Velocity += GetGravity() * (float)delta;
             MoveAndSlide();
@@ -88,4 +91,10 @@ public partial class Player : CharacterBody2D
         }
 
 	}
+
+	public static void SetHasCompletedQuiz(bool input)
+	{
+		hasCompletedQuiz = input;
+	}
+
 }

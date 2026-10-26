@@ -22,6 +22,7 @@ script = ExtResource("2_yqatb")
 
 [node name="TextBlibPlayer" type="AudioStreamPlayer" parent="." unique_id=2021645477]
 unique_name_in_owner = true
+volume_db = -30.0
 script = ExtResource("3_kymi5")
 
 [node name="ChoicesContainer" type="CenterContainer" parent="." unique_id=627403052]

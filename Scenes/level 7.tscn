@@ -279,3 +279,4 @@ NextScene = "res://Scenes/level 7.tscn"
 shape = SubResource("RectangleShape2D_3sy6q")
 
 [node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("12_mbr47")]
+dialog_path = "res://Assets/Dialogue/Dialogue 9.json"
