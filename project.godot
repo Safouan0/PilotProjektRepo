@@ -15,6 +15,14 @@ run/main_scene="uid://gxc2t2acv3wc"
 config/features=PackedStringArray("4.7", "C#", "Forward Plus")
 config/icon="res://Scripts/icon.svg"
 
+[audio]
+
+buses/default_bus_layout="uid://8cmnmb33krn1"
+
+[autoload]
+
+Music="*uid://dep6p4ugvhwdj"
+
 [display]
 
 window/size/viewport_width=1280
