@@ -22,10 +22,10 @@ public partial class Player : CharacterBody2D
   
 		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
-    camera = GetNode<Camera2D>("Camera2D");
-    camera.ResetSmoothing();
-    camera.ForceUpdateScroll();
-  }
+		camera = GetNode<Camera2D>("Camera2D");
+		camera.ResetSmoothing();
+		camera.ForceUpdateScroll();
+    }
 
 	public override void _PhysicsProcess(double delta)
 	{

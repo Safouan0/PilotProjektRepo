@@ -3,6 +3,7 @@ extends Node2D
 @onready var dialog_ui = %DialogUI
 
 static var has_completed_quiz = false
+var music_muffle = 10
 
 @export 
 var dialog_path = ""
@@ -15,10 +16,11 @@ func _ready() -> void:
 	
 	
 	if has_completed_quiz:
+		load("res://Scenes/music.tscn")
 		queue_free() 
 		return
 	
-	
+	Music.volume_db = Music.volume_db - music_muffle
 	load("res://Scripts/Player.cs").SetHasCompletedQuiz(false)
 	
 	#load dialogue
@@ -94,6 +96,7 @@ func process_line() -> void:
 		
 	if line.has("endQuiz"):
 		print("Yoo we ended")
+		Music.volume_db = Music.volume_db + music_muffle
 		has_completed_quiz = true
 		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
 		queue_free()

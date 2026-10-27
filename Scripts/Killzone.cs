@@ -31,6 +31,7 @@ public partial class Killzone : Area2D
 
 
         body.GetNode<AnimatedSprite2D>("AnimatedSprite2D").Animation = "Death";
+        body.GetNode<AudioStreamPlayer2D>("DeathSound").Play();
 
         timer.Start();
         
