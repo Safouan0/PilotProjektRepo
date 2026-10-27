@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://osygb7b3roe3" path="res://Assets/Sprites/Player/Player Walk.png" id="3_vgqql"]
 [ext_resource type="Texture2D" uid="uid://dbt1504ul15iv" path="res://Assets/Sprites/Player/Player Death.png" id="6_3smsa"]
 [ext_resource type="AudioStream" uid="uid://b1vjalxexeykm" path="res://Assets/Sounds/jump.wav" id="6_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://blqfxvun7qw46" path="res://Assets/Sounds/Death.wav" id="8_8erm5"]
+[ext_resource type="AudioStream" uid="uid://bu2g0q6v2ot2e" path="res://Assets/Sounds/Footstep.wav" id="9_f1ek2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sbwqj"]
 atlas = ExtResource("6_3smsa")
@@ -327,10 +329,9 @@ script = ExtResource("1_vgqql")
 texture_filter = 1
 position = Vector2(0, 13)
 sprite_frames = SubResource("SpriteFrames_hc1dv")
-animation = &"Death"
+animation = &"Walk"
 autoplay = "Forward idle"
-frame = 6
-frame_progress = 0.8225041
+frame_progress = 0.64952046
 offset = Vector2(0, -13)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=243672795]
@@ -339,3 +340,11 @@ shape = SubResource("RectangleShape2D_3sy6q")
 
 [node name="JumpSound" type="AudioStreamPlayer2D" parent="." unique_id=734355712]
 stream = ExtResource("6_x3wgy")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="." unique_id=2140774404]
+stream = ExtResource("8_8erm5")
+bus = &"SFX"
+
+[node name="WalkSound" type="AudioStreamPlayer2D" parent="." unique_id=694823783]
+stream = ExtResource("9_f1ek2")
+volume_db = 8.527
