@@ -1,0 +1,18 @@
+using Godot;
+using System;
+
+public partial class EventBlock : Node2D
+{
+	[Export]
+	Eventzone.EventType eventType = Eventzone.EventType.Levitate;
+
+	[Export]
+	private int duration = 3;
+
+	public override void _Ready()
+	{
+        GetNode<Eventzone>("Eventzone").eventType = eventType;
+        GetNode<Eventzone>("Eventzone").duration = duration;
+    }
+
+}

@@ -9,6 +9,7 @@ public partial class Player : CharacterBody2D
 
 	static public bool hasCompletedQuiz = true;
 
+	public bool isLevitating = false;
 
     public bool isDead = false;
 
@@ -36,6 +37,7 @@ public partial class Player : CharacterBody2D
             MoveAndSlide();
             return;
         }
+
         Vector2 velocity = Velocity;
 
 			 
@@ -80,6 +82,11 @@ public partial class Player : CharacterBody2D
 		else
 		{
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+		}
+
+		if (isLevitating)
+		{
+			velocity.Y = -30.0f;
 		}
 
 		Velocity = velocity;
