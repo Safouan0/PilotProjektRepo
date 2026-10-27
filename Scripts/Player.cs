@@ -19,12 +19,13 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
-  
-		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+        
+        animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
 		camera = GetNode<Camera2D>("Camera2D");
 		camera.ResetSmoothing();
 		camera.ForceUpdateScroll();
+		animatedSprite.FrameChanged += OnAnimationFrameChanged;
     }
 
 	public override void _PhysicsProcess(double delta)
@@ -47,6 +48,7 @@ public partial class Player : CharacterBody2D
 		else if (velocity.X > 0 || velocity.X < 0)
 		{
 			animatedSprite.Animation = "Walk";
+
 		}
 		else
 		{
@@ -97,5 +99,19 @@ public partial class Player : CharacterBody2D
 	{
 		hasCompletedQuiz = input;
 	}
+
+	public void OnAnimationFrameChanged()
+	{
+
+        if (animatedSprite.Animation != "Walk")
+		{
+			return;
+		}
+
+        if (animatedSprite.Frame == 2 || animatedSprite.Frame == 7)
+        {
+            GetNode<AudioStreamPlayer2D>("WalkSound").Play();
+        }
+    }
 
 }
