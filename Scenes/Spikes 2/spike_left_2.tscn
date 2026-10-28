@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://c1kmak3p65g0y"]
+
+[ext_resource type="Texture2D" uid="uid://b0rxoxsppq7dg" path="res://Assets/Sprites/Levels/Level 2/Tileset 2.png" id="1_jfg2x"]
+[ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="2_pxnlb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sy6q"]
+atlas = ExtResource("1_jfg2x")
+region = Rect2(0, 64, 16, 16)
+
+[node name="Spike" type="Node2D" unique_id=1546912163]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=762286551]
+texture = SubResource("AtlasTexture_3sy6q")
+
+[node name="Killzone" parent="." unique_id=388960484 instance=ExtResource("2_pxnlb")]
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Killzone" unique_id=233919670]
+position = Vector2(0, 2)
+polygon = PackedVector2Array(0, 0, 2, -8, 5, -1, 8, -6, 8, 6, -8, 6, -3, -8)

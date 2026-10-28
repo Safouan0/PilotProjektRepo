@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cv8d1ab3kvot1"]
+
+[ext_resource type="Script" uid="uid://cfijchq06wrd2" path="res://Scenes/Eventzone.cs" id="1_ob1ev"]
+
+[node name="Eventzone" type="Area2D" unique_id=1587652239]
+script = ExtResource("1_ob1ev")
+
+[node name="Timer" type="Timer" parent="." unique_id=77231285]
+one_shot = true
