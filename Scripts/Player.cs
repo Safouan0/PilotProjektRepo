@@ -11,6 +11,8 @@ public partial class Player : CharacterBody2D
 
 	public bool isLevitating = false;
 
+	public int levitationStrength = 1;
+
     public bool isDead = false;
 
 	private AnimatedSprite2D animatedSprite;
@@ -86,7 +88,7 @@ public partial class Player : CharacterBody2D
 
 		if (isLevitating)
 		{
-			velocity.Y = -30.0f;
+			velocity.Y = -30.0f + (10 * -levitationStrength);
 		}
 
 		Velocity = velocity;

@@ -14,7 +14,7 @@ public partial class Eventzone : Area2D
     public EventType eventType = EventType.Levitate;
 
     [Export]
-    public int strength;
+    public int strength = 1;
 
     [Export]
     public int duration = 3;
@@ -70,9 +70,9 @@ public partial class Eventzone : Area2D
 
     public void levitate()
     {
+        player.levitationStrength = strength;
         player.isLevitating = true;
         timer.Start(duration);
-        
     }
 
 

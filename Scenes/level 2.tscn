@@ -3,10 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://bpibx65o34dom" path="res://Assets/Sprites/Levels/Level 2/Level 2 baggrund.png" id="2_mjqxj"]
 [ext_resource type="Texture2D" uid="uid://se1i6uo7vqle" path="res://Assets/Sprites/world_tileset.png" id="2_sqm6g"]
 [ext_resource type="Texture2D" uid="uid://b0rxoxsppq7dg" path="res://Assets/Sprites/Levels/Level 2/Tileset 2.png" id="3_e8rka"]
-[ext_resource type="PackedScene" uid="uid://6cu2hsyxwilq" path="res://Scenes/Spikes 9/spike_left_9.tscn" id="4_3thi4"]
-[ext_resource type="PackedScene" uid="uid://bdxdihsw4854l" path="res://Scenes/Spikes 9/spike_right_9.tscn" id="5_wwovu"]
-[ext_resource type="PackedScene" uid="uid://b5ca1f4b5a846" path="res://Scenes/Spikes 9/spike_middle_9.tscn" id="6_cdg6t"]
-[ext_resource type="PackedScene" uid="uid://dnltg4t1g2ljf" path="res://Scenes/Spikes 9/spike_standalone_9.tscn" id="7_6gq6e"]
+[ext_resource type="PackedScene" uid="uid://c1kmak3p65g0y" path="res://Scenes/Spikes 2/spike_left_2.tscn" id="4_sqm6g"]
+[ext_resource type="PackedScene" uid="uid://cp8d1vfj1k5td" path="res://Scenes/Spikes 2/spike_right_2.tscn" id="5_mjqxj"]
+[ext_resource type="PackedScene" uid="uid://ddoobgj3pjlpg" path="res://Scenes/Spikes 2/spike_middle_2.tscn" id="6_3thi4"]
+[ext_resource type="PackedScene" uid="uid://dvf21p58d6in" path="res://Scenes/Spikes 2/spike_standalone_2.tscn" id="7_wwovu"]
 [ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="8_dryhb"]
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="9_1nev7"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="10_bo5xy"]
@@ -651,10 +651,10 @@ texture = ExtResource("3_e8rka")
 3:6/0 = 0
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_78y3u"]
-scenes/1/scene = ExtResource("4_3thi4")
-scenes/2/scene = ExtResource("5_wwovu")
-scenes/3/scene = ExtResource("6_cdg6t")
-scenes/4/scene = ExtResource("7_6gq6e")
+scenes/1/scene = ExtResource("4_sqm6g")
+scenes/2/scene = ExtResource("5_mjqxj")
+scenes/3/scene = ExtResource("6_3thi4")
+scenes/4/scene = ExtResource("7_wwovu")
 
 [sub_resource type="TileSet" id="TileSet_3sy6q"]
 physics_layer_0/collision_layer = 1
@@ -715,3 +715,4 @@ shape = SubResource("RectangleShape2D_3sy6q")
 
 [node name="Eventblock" parent="." unique_id=1546912163 instance=ExtResource("11_sqm6g")]
 position = Vector2(176, -16)
+strength = 3
