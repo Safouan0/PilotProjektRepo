@@ -1,34 +1,32 @@
 [gd_resource type="Theme" format=3 uid="uid://bxj6q8sshn717"]
 
-[ext_resource type="FontFile" uid="uid://cb4ltl7vfa26y" path="res://Assets/Fonts/LibreCaslonCondensed-Italic-VariableFont_wght.ttf" id="1_sqbec"]
+[ext_resource type="FontFile" uid="uid://3lwq3u2ru1wg" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_cmk8j"]
+[ext_resource type="Texture2D" uid="uid://dwr4dkjmg2rp7" path="res://Assets/Dialogue/Options/Dialogue Option (Hover).png" id="2_cmk8j"]
 [ext_resource type="FontFile" uid="uid://b8qckiu3f7g74" path="res://Assets/Fonts/LibreCaslonCondensed-VariableFont_wght.ttf" id="2_hhkya"]
-[ext_resource type="Texture2D" uid="uid://crqw5afk2f120" path="res://Assets/Backgrounds/Background Placeholder.png" id="2_po7pg"]
+[ext_resource type="Texture2D" uid="uid://bxmvy2lj0v0eh" path="res://Assets/Dialogue/Options/Dialogue Option (Normal).png" id="3_psjhv"]
+[ext_resource type="Texture2D" uid="uid://cdgosqksmyvrl" path="res://Assets/Dialogue/Options/Dialogue Option (Clicked).png" id="4_36q64"]
+[ext_resource type="Texture2D" uid="uid://0ofsi005efvw" path="res://Assets/Dialogue/Dialogue box/Dialogue Box.png" id="5_f3yll"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oa70m"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bpxmn"]
-bg_color = Color(0.9411765, 0.8156863, 0.45490196, 1)
-border_width_left = 3
-border_width_top = 3
-border_width_right = 3
-border_width_bottom = 3
-border_color = Color(1, 1, 1, 0.5529412)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7pjjs"]
+texture = ExtResource("2_cmk8j")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q7v58"]
-bg_color = Color(0.9411765, 0.8156863, 0.45490196, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h5n0f"]
+texture = ExtResource("2_cmk8j")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t33e6"]
-bg_color = Color(0.9426632, 0.8149344, 0.45316243, 0.5058824)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn0ip"]
+texture = ExtResource("3_psjhv")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5p0k4"]
-bg_color = Color(0.5720743, 0.470967, 0.15697518, 1)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v3uy0"]
+texture = ExtResource("4_36q64")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hhcb3"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8uy8b"]
 content_margin_left = 30.0
 content_margin_top = 10.0
 content_margin_right = 30.0
 content_margin_bottom = 10.0
-texture = ExtResource("2_po7pg")
+texture = ExtResource("5_f3yll")
 
 [resource]
 default_font = ExtResource("2_hhkya")
@@ -37,17 +35,18 @@ Button/colors/font_focus_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_color = Color(0, 0, 0, 1)
 Button/colors/font_hover_pressed_color = Color(0, 0, 0, 1)
 Button/colors/font_pressed_color = Color(0, 0, 0, 1)
-Button/font_sizes/font_size = 35
-Button/fonts/font = ExtResource("2_hhkya")
+Button/font_sizes/font_size = 30
+Button/fonts/font = ExtResource("1_cmk8j")
 Button/styles/disabled = SubResource("StyleBoxFlat_oa70m")
-Button/styles/focus = SubResource("StyleBoxFlat_bpxmn")
-Button/styles/hover = SubResource("StyleBoxFlat_q7v58")
-Button/styles/normal = SubResource("StyleBoxFlat_t33e6")
-Button/styles/pressed = SubResource("StyleBoxFlat_5p0k4")
-PanelContainer/styles/panel = SubResource("StyleBoxTexture_hhcb3")
+Button/styles/focus = SubResource("StyleBoxTexture_7pjjs")
+Button/styles/hover = SubResource("StyleBoxTexture_h5n0f")
+Button/styles/normal = SubResource("StyleBoxTexture_tn0ip")
+Button/styles/pressed = SubResource("StyleBoxTexture_v3uy0")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_8uy8b")
 RichTextLabel/font_sizes/bold_font_size = 40
 RichTextLabel/font_sizes/italics_font_size = 40
 RichTextLabel/font_sizes/normal_font_size = 40
-RichTextLabel/fonts/italics_font = ExtResource("1_sqbec")
-RichTextLabel/fonts/normal_font = ExtResource("2_hhkya")
+RichTextLabel/fonts/bold_font = ExtResource("1_cmk8j")
+RichTextLabel/fonts/italics_font = ExtResource("1_cmk8j")
+RichTextLabel/fonts/normal_font = ExtResource("1_cmk8j")
 VBoxContainer/constants/separation = 16
