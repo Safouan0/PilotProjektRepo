@@ -62,7 +62,7 @@
 	{ "choice":
 		[
 			{
-			"Text": "Jeg forbander dem i Herrens navn og sørger for at deres puder altid er varme.", 
+			"Text": "Jeg forbander dem i Herrens navn, så deres puder altid er varme.", 
 			"goto": "default_choice",
 			"choice_points": 10
 			},
