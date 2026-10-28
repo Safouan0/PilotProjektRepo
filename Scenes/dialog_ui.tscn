@@ -43,10 +43,9 @@ unique_name_in_owner = true
 layout_mode = 2
 
 [node name="ChoiceButton" parent="ChoicesContainer/ChoiceList" unique_id=857277202 instance=ExtResource("4_5t5tq")]
-visible = false
 custom_minimum_size = Vector2(1100, 60)
 layout_mode = 2
-text = "Jeg forbander dem i herrens navn, så deres pude altid er varm hhhhhhhhhhhhhhhhhh"
+text = "Eksempel på valg"
 
 [node name="DialogBox" type="PanelContainer" parent="." unique_id=263938054]
 custom_minimum_size = Vector2(0, 150)
