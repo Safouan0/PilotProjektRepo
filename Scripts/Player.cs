@@ -13,7 +13,7 @@ public partial class Player : CharacterBody2D
 
 	public float levitationStrength = 1.0f;
 
-    public bool isDead = false;
+	public bool isDead = false;
 
 	private AnimatedSprite2D animatedSprite;
 	private AudioStreamPlayer2D jumpSound;
@@ -22,25 +22,25 @@ public partial class Player : CharacterBody2D
 
 	public override void _Ready()
 	{
-        
-        animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		
+		animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		jumpSound = GetNode<AudioStreamPlayer2D>("JumpSound");
 		camera = GetNode<Camera2D>("Camera2D");
 		camera.ResetSmoothing();
 		camera.ForceUpdateScroll();
 		animatedSprite.FrameChanged += OnAnimationFrameChanged;
-    }
+	}
 
 	public override void _PhysicsProcess(double delta)
 	{
-        if (isDead || !hasCompletedQuiz)
-        {
-            Velocity += GetGravity() * (float)delta;
-            MoveAndSlide();
-            return;
-        }
+		if (isDead || !hasCompletedQuiz)
+		{
+			Velocity += GetGravity() * (float)delta;
+			MoveAndSlide();
+			return;
+		}
 
-        Vector2 velocity = Velocity;
+		Vector2 velocity = Velocity;
 
 			 
 		// Add animation
@@ -112,15 +112,15 @@ public partial class Player : CharacterBody2D
 	public void OnAnimationFrameChanged()
 	{
 
-        if (animatedSprite.Animation != "Walk")
+		if (animatedSprite.Animation != "Walk")
 		{
 			return;
 		}
 
-        if (animatedSprite.Frame == 2 || animatedSprite.Frame == 7)
-        {
-            GetNode<AudioStreamPlayer2D>("WalkSound").Play();
-        }
-    }
+		if (animatedSprite.Frame == 2 || animatedSprite.Frame == 7)
+		{
+			GetNode<AudioStreamPlayer2D>("WalkSound").Play();
+		}
+	}
 
 }

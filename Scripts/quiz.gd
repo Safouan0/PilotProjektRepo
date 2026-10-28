@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var dialog_ui = %DialogUI
-
 static var has_completed_quiz = false
 var music_muffle = 10
 
@@ -41,12 +40,14 @@ func _input(event: InputEvent):
 			dialog_ui.skip_text_animation()
 		elif dialog_index < len(dialog_lines) - 1:
 			dialog_index += 1
+			dialog_ui.button_sound.play_sound("Button")
 			process_line()
 			
 	#plays prev lines
 	if event.is_action_pressed("prev_line"):
 		if dialog_index >= 1 :
 			dialog_index -= 1
+			dialog_ui.button_sound.play_sound("Button")
 			process_line()
 		
 			

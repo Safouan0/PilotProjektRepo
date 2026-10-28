@@ -9,8 +9,9 @@ const ChoiceButtonScene = preload("res://Scenes/player_choice.tscn")
 
 @onready var dialog_text = %DialogText
 @onready var speaker_name = %SpeakerName
-@onready var text_blib_player = %TextBlibPlayer
+@onready var sound = %sound
 @onready var choice_list = %ChoiceList
+@onready var button_sound = %button_sound
 
 const ANIMATION_SPEED : int = 30
 const NO_SOUND_CHARS : Array = [" ","?","!",":"]
@@ -62,7 +63,7 @@ func _process(delta):
 				var last_char = dialog_text.text[current_shown_chars-1]
 				
 				if last_char not in NO_SOUND_CHARS:
-					text_blib_player.play_sound()
+					sound.play_sound("Angel")
 		else:
 			animate_text = false 
 		
@@ -74,5 +75,7 @@ func change_line(line: String):
 	animate_text = true
 
 func _on_choice_button_pressed(anchor: String, choice_points: int):
+	print("Button pressed")
+	button_sound.play_sound("Button")
 	choice_selected.emit(anchor, choice_points)
 	choice_list.hide()

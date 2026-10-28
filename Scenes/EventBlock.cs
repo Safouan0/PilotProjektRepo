@@ -14,9 +14,9 @@ public partial class EventBlock : Node2D
 
 	public override void _Ready()
 	{
-        GetNode<Eventzone>("Eventzone").eventType = eventType;
-        GetNode<Eventzone>("Eventzone").duration = duration;
-        GetNode<Eventzone>("Eventzone").strength = strength;
-    }
+		GetNode<Eventzone>("Eventzone").eventType = eventType;
+		GetNode<Eventzone>("Eventzone").duration = duration;
+		GetNode<Eventzone>("Eventzone").strength = strength;
+	}
 
 }
