@@ -86,9 +86,9 @@ public partial class Player : CharacterBody2D
 			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
 		}
 
-		if (isLevitating)
+		if (isLevitating && levitationStrength != 0)
 		{
-			velocity.Y = -30.0f + (10 * -levitationStrength);
+			velocity.Y = 10 * -levitationStrength;
 		}
 
 		Velocity = velocity;

@@ -4,7 +4,7 @@ using System;
 public partial class EventBlock : Node2D
 {
 	[Export]
-	Eventzone.EventType eventType = Eventzone.EventType.Levitate;
+	Eventzone.EventType eventType = Eventzone.EventType.None;
 
 	[Export]
 	private int duration = 3;

@@ -715,4 +715,4 @@ shape = SubResource("RectangleShape2D_3sy6q")
 
 [node name="Eventblock" parent="." unique_id=1546912163 instance=ExtResource("11_sqm6g")]
 position = Vector2(176, -16)
-strength = 3
+strength = 0

@@ -6,12 +6,12 @@ public partial class Eventzone : Area2D
 
     public enum EventType
     {
-        Levitate
+        None, Levitate
     }
 
 
     [Export]
-    public EventType eventType = EventType.Levitate;
+    public EventType eventType = EventType.None;
 
     [Export]
     public int strength = 1;
@@ -39,6 +39,9 @@ public partial class Eventzone : Area2D
 
         switch (eventType)
         {
+            case EventType.None:
+                break;
+
             case EventType.Levitate:
                 levitate();
                 break;
@@ -57,6 +60,10 @@ public partial class Eventzone : Area2D
 
         switch (eventType)
         {
+
+            case EventType.None:
+                break;
+
             case EventType.Levitate:
                 player.isLevitating = false;
                 break;
