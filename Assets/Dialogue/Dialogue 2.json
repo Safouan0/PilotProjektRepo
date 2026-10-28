@@ -61,11 +61,11 @@
 	
 	{"anchor": "post_3_choice"},
 
-	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den tredje test."},
+	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den tredje og sidste test."},
 	
-	{"Speaker": "Engel", "Text": "Du er 1/3 af vejen"},
+	{"Speaker": "Engel", "Text": "Tiden er nu inde..."},
 	
-	{"Speaker": "Name1", "Text": "Så længe vandrerer"},
+	{"Speaker": "Name1", "Text": "Du vil nu blive bedømt..."},
 	
-	{"goto": "fourth_level_quiz"},
+	{"endGame": "endGame"},
 ]

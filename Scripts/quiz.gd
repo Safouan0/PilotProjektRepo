@@ -102,6 +102,14 @@ func process_line() -> void:
 		queue_free()
 		return
 		
+	if line.has("endGame"):
+		
+		has_completed_quiz = true
+		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
+		queue_free()
+		
+		return
+		
 	if line.has("choice"):
 		#display choices
 		dialog_ui.display_choices(line["choice"])

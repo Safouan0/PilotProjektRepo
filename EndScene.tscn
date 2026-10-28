@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://i3kw3sjcpv2q"]
+
+[ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_dwrsa"]
+[ext_resource type="Texture2D" uid="uid://bn54373tvdf3b" path="res://Assets/Backgrounds/End Background.png" id="1_xckxy"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="2_xckxy"]
+[ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="3_34l3g"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
+
+[node name="Node2D" type="Node2D" unique_id=629504717]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845202053]
+position = Vector2(0, -225)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_xckxy")
+centered = false
+
+[node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_dwrsa")]
+position = Vector2(64, -96)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=439768462]
+zoom = Vector2(3.2, 3.2)
+limit_left = 0
+limit_top = -225
+limit_right = 400
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("2_xckxy")]
+position = Vector2(16, -112)
+dialog_path = "res://Assets/Dialogue/Dialogue 2.json"
+
+[node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("3_34l3g")]
+position = Vector2(176, -32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1659127643]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1249191717]
+shape = SubResource("WorldBoundaryShape2D_3sy6q")
