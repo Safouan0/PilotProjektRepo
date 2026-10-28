@@ -3,8 +3,9 @@
 [ext_resource type="Theme" uid="uid://bxj6q8sshn717" path="res://Assets/Themes/DialogueTheme.tres" id="1_gsrxu"]
 [ext_resource type="LabelSettings" uid="uid://djlnb0h6hfas4" path="res://Assets/Themes/NameSettings.tres" id="2_3gjcu"]
 [ext_resource type="Script" uid="uid://cndhecogdwpec" path="res://Scripts/dialog_ui.gd" id="2_yqatb"]
-[ext_resource type="Script" uid="uid://bvp24hfr4pr78" path="res://Scripts/text_blib_player.gd" id="3_kymi5"]
+[ext_resource type="Script" uid="uid://bvp24hfr4pr78" path="res://Scripts/sound.gd" id="3_kymi5"]
 [ext_resource type="PackedScene" uid="uid://cr2jcobavmkg1" path="res://Scenes/player_choice.tscn" id="4_5t5tq"]
+[ext_resource type="Script" uid="uid://dfhbcbelgedgl" path="res://button_sound.gd" id="4_oa70m"]
 [ext_resource type="Texture2D" uid="uid://bls0iduomns05" path="res://Assets/Dialogue/Dialogue box/Dialogue Name.png" id="6_t33e6"]
 
 [node name="DialogUI" type="Control" unique_id=435558196]
@@ -21,19 +22,22 @@ grow_vertical = 2
 theme = ExtResource("1_gsrxu")
 script = ExtResource("2_yqatb")
 
-[node name="TextBlibPlayer" type="AudioStreamPlayer" parent="." unique_id=2021645477]
+[node name="sound" type="AudioStreamPlayer" parent="." unique_id=2021645477]
 unique_name_in_owner = true
 volume_db = -30.0
 bus = &"Quiz"
 script = ExtResource("3_kymi5")
 
+[node name="button_sound" type="AudioStreamPlayer" parent="." unique_id=2071753277]
+unique_name_in_owner = true
+script = ExtResource("4_oa70m")
+
 [node name="ChoicesContainer" type="CenterContainer" parent="." unique_id=627403052]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -1.0
-offset_bottom = -167.0
+anchor_bottom = 0.711
+offset_bottom = 0.07998657
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_gsrxu")
@@ -41,9 +45,9 @@ theme = ExtResource("1_gsrxu")
 [node name="ChoiceList" type="VBoxContainer" parent="ChoicesContainer" unique_id=397360212]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_constants/separation = 30
 
 [node name="ChoiceButton" parent="ChoicesContainer/ChoiceList" unique_id=857277202 instance=ExtResource("4_5t5tq")]
-custom_minimum_size = Vector2(1100, 60)
 layout_mode = 2
 text = "Eksempel på valg"
 
@@ -80,12 +84,12 @@ theme = ExtResource("1_gsrxu")
 [node name="TextureRect" type="TextureRect" parent="SpeakerBox" unique_id=1692242699]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_left = 20.0
-offset_top = -17.0
-offset_right = 268.0
-offset_bottom = 26.0
+anchor_top = 1.065
+anchor_bottom = 1.065
+offset_left = 22.0
+offset_top = -21.505985
+offset_right = 270.0
+offset_bottom = 21.494015
 theme = ExtResource("1_gsrxu")
 texture = ExtResource("6_t33e6")
 
