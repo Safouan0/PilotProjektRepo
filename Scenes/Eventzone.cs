@@ -14,10 +14,10 @@ public partial class Eventzone : Area2D
     public EventType eventType = EventType.None;
 
     [Export]
-    public int strength = 1;
+    public float strength = 1.0f;
 
     [Export]
-    public int duration = 3;
+    public float duration = 3.0f;
 
     private Player player;
     private Timer timer;

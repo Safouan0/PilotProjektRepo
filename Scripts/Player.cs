@@ -11,7 +11,7 @@ public partial class Player : CharacterBody2D
 
 	public bool isLevitating = false;
 
-	public int levitationStrength = 1;
+	public float levitationStrength = 1.0f;
 
     public bool isDead = false;
 
@@ -88,7 +88,7 @@ public partial class Player : CharacterBody2D
 
 		if (isLevitating && levitationStrength != 0)
 		{
-			velocity.Y = 10 * -levitationStrength;
+			velocity.Y = 10.0f * -levitationStrength;
 		}
 
 		Velocity = velocity;
