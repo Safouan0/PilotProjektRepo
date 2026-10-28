@@ -1,7 +1,7 @@
 [gd_resource type="LabelSettings" format=3 uid="uid://djlnb0h6hfas4"]
 
-[ext_resource type="FontFile" uid="uid://b8qckiu3f7g74" path="res://Assets/Fonts/LibreCaslonCondensed-VariableFont_wght.ttf" id="1_dyt4g"]
+[ext_resource type="FontFile" uid="uid://3lwq3u2ru1wg" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="1_muwpw"]
 
 [resource]
-font = ExtResource("1_dyt4g")
+font = ExtResource("1_muwpw")
 font_size = 25
