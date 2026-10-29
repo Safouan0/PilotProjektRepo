@@ -107,7 +107,7 @@ func process_line() -> void:
 		
 		has_completed_quiz = true
 		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
-		if score < 40:
+		if score >= 100:
 			get_node("../Sprite2D/Sprite2D2").texture = load("res://Assets/Sprites/Levels/Level 7/Tileset 7.png")
 		else:
 			get_node("../Sprite2D/Sprite2D2").texture = load("res://Assets/Dialogue/Options/Dialogue Option (Normal).png")

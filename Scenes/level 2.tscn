@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="9_1nev7"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="10_bo5xy"]
 [ext_resource type="PackedScene" uid="uid://chkkwhqpqvnt8" path="res://Scenes/event_block.tscn" id="11_sqm6g"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="11_wwovu"]
 [ext_resource type="PackedScene" uid="uid://5ij4hsprqpnm" path="res://Scenes/saw.tscn" id="13_3thi4"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="13_wwovu"]
 
@@ -723,7 +724,7 @@ NextScene = "res://Scenes/level 7.tscn"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=493597307]
 shape = SubResource("RectangleShape2D_3sy6q")
 
-[node name="Quiz" parent="." unique_id=477676082 instance_placeholder="res://Scenes/quiz.tscn"]
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("11_wwovu")]
 dialog_path = "res://Assets/Dialogue/Dialogue 7.json"
 
 [node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("13_wwovu")]
