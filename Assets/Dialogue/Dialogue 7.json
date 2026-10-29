@@ -4,15 +4,15 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du er nu kommet frem til den anden test."
+		"Text": "Du er nu kommet frem til den anden test"
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Jeg behøver ikke at spørge dig om du er klar vel?..."
+		"Text": "Jeg behøver ikke at spørge dig, om du er klar, vel?..."
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Nej det tænkte jeg nok"
+		"Text": "Nej, det tænkte jeg nok"
 	},
 	{
 		"Speaker": "Engel",
@@ -41,7 +41,7 @@
 	{
 		"choice": [
 			{
-				"Text": "Da det er forbudt at tænde ild, begynder det at storme og ilden går ud ",
+				"Text": "Da det er forbudt at tænde ild, begynder det at storme og ilden går ud",
 				"goto": "default_choice2",
 				"choice_points": 0
 			},
@@ -67,11 +67,11 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Hmmm interesant..."
+		"Text": "Hmmm interessant..."
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "... Meget interesant"
+		"Text": "... Meget interessant"
 	},
 	{
 		"Speaker": "Engel",
@@ -85,7 +85,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du er nu kommet igennem den anden test."
+		"Text": "Du er nu kommet igennem den anden test"
 	},
 	{
 		"Speaker": "Engel",

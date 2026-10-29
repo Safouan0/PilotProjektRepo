@@ -7,6 +7,8 @@ public partial class Player : CharacterBody2D
 	public const float Speed = 100.0f;
 	public const float JumpVelocity = -250.0f;
 
+	static public float GravityMultiplier = 1.0f;
+
 	static public bool hasCompletedQuiz = true;
 
 	public bool isLevitating = false;
@@ -73,7 +75,7 @@ public partial class Player : CharacterBody2D
 		// Add the gravity.
 		if (!IsOnFloor())
 		{
-			velocity += GetGravity() * (float)delta;
+			velocity += (GetGravity() * GravityMultiplier) * (float)delta;
 		}
 
 		// Handle Jump.

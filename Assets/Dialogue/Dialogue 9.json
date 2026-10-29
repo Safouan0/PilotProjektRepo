@@ -1,7 +1,7 @@
 [
 	{"anchor": "first_level_quiz"},
 	
-	{"Speaker": "Engel", "Text": "Vær hilset Barnille"},
+	{"Speaker": "Engel", "Text": "Vær hilset Barnlille"},
 	
 	{"Speaker": "Engel", "Text": "Du har nu kæmpet dig op fra den nederste ring af helvede, men du er ikke færdig endnu"},
 	
@@ -25,7 +25,7 @@
 	
 	{"anchor": "retorisk1"},
 	
-	{"Speaker": "Engel", "Text": "Godt så! lad os gå igang"},
+	{"Speaker": "Engel", "Text": "Godt så! lad os gå i gang"},
 	
 	{"goto": "post_retorisk"},
 	
@@ -34,9 +34,9 @@
 	
 	{"Speaker": "Engel", "Text": "..."},
 	
-	{"Speaker": "Engel", "Text": "...Det var et retorisk spørgsmål du har ikke et valg"},
+	{"Speaker": "Engel", "Text": "...Det var et retorisk spørgsmål, du har ikke et valg"},
 	
-	{"Speaker": "Engel", "Text": "Lad os gå igang!"},
+	{"Speaker": "Engel", "Text": "Lad os gå i gang!"},
 	
 	{"goto": "post_retorisk"},
 	
@@ -51,7 +51,7 @@
 	
 	{"Speaker": "Engel", "Text": "De råber efter dig 'Kom herop, skaldepande, kom herop' "},
 	
-	{"Speaker": "Engel", "Text": "Hvordan forsætter du?"},
+	{"Speaker": "Engel", "Text": "Hvordan fortsætter du?"},
 	
 	{ "choice":
 		[
@@ -82,9 +82,9 @@
 	
 	{"anchor": "default_choice"},
 	
-	{"Speaker": "Engel", "Text": "Hmmm interesant..."},
+	{"Speaker": "Engel", "Text": "Hmmm interessant..."},
 	
-	{"Speaker": "Engel", "Text": "... Meget interesant"},
+	{"Speaker": "Engel", "Text": "... Meget interessant"},
 	
 	{"goto": "post_1_choice"},
 	
@@ -94,7 +94,7 @@
 
 	{"Speaker": "Engel", "Text": "Du er nu kommet igennem den første test"},
 	
-	{"Speaker": "Engel", "Text": "Du får resultatet af din værdi, når du står for enden af den rejse"},
+	{"Speaker": "Engel", "Text": "Du får resultatet af din værdi, når du står for enden af din rejse"},
 	
 	{"Speaker": "Engel", "Text": "Indtil næste gang"},
 	

@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://i3kw3sjcpv2q"]
 
-[ext_resource type="Texture2D" uid="uid://bn54373tvdf3b" path="res://Assets/Backgrounds/End Background.png" id="1_sxgjw"]
-[ext_resource type="Texture2D" uid="uid://bls0iduomns05" path="res://Assets/Dialogue/Dialogue box/Dialogue Name.png" id="2_44jhl"]
+[ext_resource type="Texture2D" uid="uid://ba613ta86tsxn" path="res://Assets/Backgrounds/End Background FinalText.png" id="1_sxgjw"]
+[ext_resource type="Texture2D" uid="uid://cnj72eph6c5va" path="res://Assets/Sprites/End level/Logos-2.png.png" id="2_sxgjw"]
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="3_2gonq"]
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="4_wctei"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="5_0rbow"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="6_oen81"]
+[ext_resource type="Texture2D" uid="uid://cmtdaxwcux181" path="res://Assets/Sprites/End level/End Front Cloud.png" id="7_44jhl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
 
@@ -76,6 +77,9 @@ size = Vector2(27.200043, 180.00003)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w11f4"]
 size = Vector2(29.200005, 177.6)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3sy6q"]
+b = Vector2(0, 175)
+
 [node name="Node2D" type="Node2D" unique_id=629504717]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845202053]
@@ -86,12 +90,13 @@ centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=248710274]
 self_modulate = Color(1, 1, 1, 0)
-position = Vector2(138.40001, 40.8)
-texture = ExtResource("2_44jhl")
+position = Vector2(114.4, 20)
+texture = ExtResource("2_sxgjw")
 centered = false
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("3_2gonq")]
-position = Vector2(64, -96)
+position = Vector2(40.000004, -65.00001)
+scale = Vector2(1.23, 1.23)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=439768462]
 zoom = Vector2(3.2, 3.2)
@@ -103,7 +108,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("4_wctei")]
-visible = false
 position = Vector2(16, -112)
 dialog_path = "res://Assets/Dialogue/Dialogue 2.json"
 
@@ -134,29 +138,25 @@ shape = SubResource("RectangleShape2D_3sy6q")
 position = Vector2(-23.99997, -113.00002)
 scale = Vector2(1.25, 1.25)
 collision_mask = 2
+NextScene = "res://Scenes/level 9.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone2" unique_id=1016872533]
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_w11f4")
 
-[node name="Label2" type="Label" parent="." unique_id=1240047942]
-offset_left = 8.0
-offset_top = -91.0
-offset_right = 89.0
-offset_bottom = -66.0
-theme_override_constants/line_spacing = -2
-theme_override_font_sizes/font_size = 4
-text = "Forsøg at undslippe dybderne af 
-helvede endnu en gang..."
-autowrap_mode = 2
+[node name="Node2D" type="Node2D" parent="." unique_id=491057385]
+position = Vector2(87, -80)
+rotation = -0.061086524
+skew = 0.045378562
 
-[node name="Label3" type="Label" parent="." unique_id=1210255314]
-offset_left = 315.0
-offset_top = -96.0
-offset_right = 396.0
-offset_bottom = -71.0
-theme_override_constants/line_spacing = -2
-theme_override_font_sizes/font_size = 4
-text = "Gå imod det hellige lys
-(luk spillet og rør græs)"
-autowrap_mode = 2
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=799198258]
+position = Vector2(375, -220)
+scale = Vector2(1.25, 1.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=659814115]
+shape = SubResource("SegmentShape2D_3sy6q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1217033266]
+position = Vector2(199.99992, -112.00004)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("7_44jhl")
