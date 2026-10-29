@@ -1,17 +1,36 @@
 [
-	{"anchor": "into"},
-	
-	{"Speaker": "Engel", "Text": "Vær hilset sjæl"},
-	
-	{"Speaker": "Engel", "Text": "Du har været en slem ukønnet person, men alt håb er ikke over"},
-	
-	{"Speaker": "Engel", "Text": "For at komme hjem skal du først igennem alle ni ringe af helvede, og bevise dit værd på vejen"},
-	
-	{"Speaker": "Engel", "Text": "Du bliver testet undervejs på din rejse, og hvis du bliver fundet værdig, så får du adgang til Paradis..."},
-	
-	{"Speaker": "Engel", "Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen"},
-	
-	{"Speaker": "Engel", "Text": "Held og lykke, du får brug for det"},
-	
-	{"Speaker": "Engel", "Text": "Vi ses på næste lag"},
+	{
+		"anchor": "into"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Vær hilset sjæl"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Du har været en slem ukønnet person, men alt håb er ikke over"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "For at komme hjem skal du først igennem alle ni ringe af helvede, og bevise dit værd på vejen"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Du bliver testet undervejs på din rejse, og hvis du bliver fundet værdig, så får du adgang til Paradis..."
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Held og lykke, du får brug for det"
+	},
+	{
+		"Speaker": "Engel",
+		"Text": "Vi ses på næste lag"
+	},
+	{
+		"endQuiz": "endQuiz"
+	}
 ]

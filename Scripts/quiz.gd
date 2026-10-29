@@ -9,7 +9,7 @@ var dialog_path = ""
 
 var dialog_index : int = 0
 var dialog_lines: Array = []
-var score: int = 0
+static var score: int = 0
 
 func _ready() -> void:
 	
