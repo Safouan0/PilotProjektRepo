@@ -9,7 +9,7 @@ var dialog_path = ""
 
 var dialog_index : int = 0
 var dialog_lines: Array = []
-var score: int = 0
+static var score: int = 0
 
 func _ready() -> void:
 	
@@ -101,6 +101,23 @@ func process_line() -> void:
 		has_completed_quiz = true
 		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
 		queue_free()
+		return
+		
+	if line.has("endGame"):
+		
+		has_completed_quiz = true
+		load("res://Scripts/Player.cs").SetHasCompletedQuiz(true)
+		if score >= 100:
+			get_node("../Sprite2D/Sprite2D2").texture = load("res://Assets/Sprites/Levels/Level 7/Tileset 7.png")
+		else:
+			get_node("../Sprite2D/Sprite2D2").texture = load("res://Assets/Dialogue/Options/Dialogue Option (Normal).png")
+			
+			
+		get_node("../AnimationPlayer").play("shake")
+		
+		
+		queue_free()
+		
 		return
 		
 	if line.has("choice"):

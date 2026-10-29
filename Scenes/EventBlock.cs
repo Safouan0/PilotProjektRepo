@@ -7,10 +7,10 @@ public partial class EventBlock : Node2D
 	Eventzone.EventType eventType = Eventzone.EventType.None;
 
 	[Export]
-	private int duration = 3;
+	private float duration = 3.0f;
 
 	[Export]
-	private int strength = 1;
+	private float strength = 1.0f;
 
 	public override void _Ready()
 	{

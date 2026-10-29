@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ddtbod7gq8b8o" path="res://Scenes/Spikes 7/spike_left_7.tscn" id="9_wxqbd"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="11_n4mrr"]
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="12_mbr47"]
+[ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="13_uviie"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_1clf0")
@@ -273,10 +274,13 @@ position_smoothing_enabled = true
 [node name="Winzone" parent="." unique_id=257492560 instance=ExtResource("11_n4mrr")]
 position = Vector2(664, -327)
 collision_mask = 2
-NextScene = "res://Scenes/level 7.tscn"
+NextScene = "res://Scenes/level 2.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=2138267394]
 shape = SubResource("RectangleShape2D_3sy6q")
 
 [node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("12_mbr47")]
 dialog_path = "res://Assets/Dialogue/Dialogue 9.json"
+
+[node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("13_uviie")]
+position = Vector2(213, -135)

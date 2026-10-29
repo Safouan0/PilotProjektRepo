@@ -1,0 +1,162 @@
+[gd_scene format=3 uid="uid://i3kw3sjcpv2q"]
+
+[ext_resource type="Texture2D" uid="uid://bn54373tvdf3b" path="res://Assets/Backgrounds/End Background.png" id="1_sxgjw"]
+[ext_resource type="Texture2D" uid="uid://bls0iduomns05" path="res://Assets/Dialogue/Dialogue box/Dialogue Name.png" id="2_44jhl"]
+[ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="3_2gonq"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="4_wctei"]
+[ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="5_0rbow"]
+[ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="6_oen81"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
+
+[sub_resource type="Animation" id="Animation_34l3g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_xckxy"]
+resource_name = "shake"
+length = 1.8666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35000002, 0.4, 0.43333334, 0.48333335, 0.53333336, 0.5833334, 0.6333333, 0.68333334, 0.73333335, 0.78333336, 0.8333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664, 1.79),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34l3g"]
+_data = {
+&"RESET": SubResource("Animation_34l3g"),
+&"shake": SubResource("Animation_xckxy")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3sy6q"]
+size = Vector2(27.200043, 180.00003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w11f4"]
+size = Vector2(29.200005, 177.6)
+
+[node name="Node2D" type="Node2D" unique_id=629504717]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845202053]
+position = Vector2(0, -225)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("1_sxgjw")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=248710274]
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(138.40001, 40.8)
+texture = ExtResource("2_44jhl")
+centered = false
+
+[node name="Player" parent="." unique_id=1657756045 instance=ExtResource("3_2gonq")]
+position = Vector2(64, -96)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=439768462]
+zoom = Vector2(3.2, 3.2)
+limit_left = 0
+limit_top = -225
+limit_right = 400
+limit_bottom = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("4_wctei")]
+visible = false
+position = Vector2(16, -112)
+dialog_path = "res://Assets/Dialogue/Dialogue 2.json"
+
+[node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("5_0rbow")]
+position = Vector2(176, -32)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1659127643]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1249191717]
+shape = SubResource("WorldBoundaryShape2D_3sy6q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=73905965]
+libraries/ = SubResource("AnimationLibrary_34l3g")
+
+[node name="Winzone" parent="." unique_id=257492560 instance=ExtResource("6_oen81")]
+position = Vector2(416.99997, -89.99999)
+scale = Vector2(1.25, 1.25)
+collision_mask = 2
+NextScene = "res://Scenes/StartScene.tscn"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=2082145606]
+position = Vector2(3.2000427, -19.200005)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_3sy6q")
+
+[node name="Winzone2" parent="." unique_id=456337091 instance=ExtResource("6_oen81")]
+position = Vector2(-23.99997, -113.00002)
+scale = Vector2(1.25, 1.25)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone2" unique_id=1016872533]
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_w11f4")
+
+[node name="Label2" type="Label" parent="." unique_id=1240047942]
+offset_left = 8.0
+offset_top = -91.0
+offset_right = 89.0
+offset_bottom = -66.0
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 4
+text = "Forsøg at undslippe dybderne af 
+helvede endnu en gang..."
+autowrap_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=1210255314]
+offset_left = 315.0
+offset_top = -96.0
+offset_right = 396.0
+offset_bottom = -71.0
+theme_override_constants/line_spacing = -2
+theme_override_font_sizes/font_size = 4
+text = "Gå imod det hellige lys
+(luk spillet og rør græs)"
+autowrap_mode = 2

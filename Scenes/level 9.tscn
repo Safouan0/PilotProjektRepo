@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://6pturj33df6m" path="res://Scenes/killzone.tscn" id="9_33af5"]
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="10_aixd8"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="10_kfgqd"]
+[ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="11_2hgak"]
+[ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="12_hv1bf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_hv1bf")
@@ -262,7 +264,7 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape2D_3sy6q")
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("10_aixd8")]
-position = Vector2(601, -341)
+position = Vector2(602, -340)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
 zoom = Vector2(3, 3)
@@ -281,3 +283,9 @@ NextScene = "res://Scenes/level 7.tscn"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Winzone" unique_id=493597307]
 shape = SubResource("RectangleShape2D_3sy6q")
+
+[node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("11_2hgak")]
+dialog_path = "res://Assets/Dialogue/Intro.json"
+
+[node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("12_hv1bf")]
+position = Vector2(213, -135)
