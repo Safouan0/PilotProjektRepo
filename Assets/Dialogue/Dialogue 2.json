@@ -4,7 +4,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du er nu kommet frem til den tredje test."
+		"Text": "Du er nu kommet frem til den tredje test"
 	},
 	{
 		"Speaker": "Engel",
@@ -12,7 +12,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Bahh nok ikke vel?"
+		"Text": "Bahh, nok ikke vel?"
 	},
 	{
 		"Speaker": "Engel",
@@ -20,11 +20,11 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du kender dealen."
+		"Text": "Du kender dealen"
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du får et scenearie, og alt efter hvad du svarer bliver du bedømt i Guds øjne"
+		"Text": "Du får et scenearie, og alt efter hvad du svarer, bliver du bedømt i Guds øjne"
 	},
 	{
 		"Speaker": "Engel",
@@ -36,11 +36,11 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "En af soldaterne går opmærksomt ved siden af arken "
+		"Text": "En af soldaterne går opmærksomt ved siden af arken"
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Netop som han kigger snubler oksen der bærer vognen med arken "
+		"Text": "Netop som han kigger snubler oksen der bærer vognen med arken"
 	},
 	{
 		"Speaker": "Engel",
@@ -48,7 +48,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Dette er selvom du har forbudt nogen af røre arken"
+		"Text": "Dette er selvom du har forbudt nogen at røre arken"
 	},
 	{
 		"Speaker": "Engel",
@@ -57,7 +57,7 @@
 	{
 		"choice": [
 			{
-				"Text": "Du belønner den loyale soldat med godt held resten af livet, for at rede arken",
+				"Text": "Du belønner den loyale soldat med godt held resten af livet, for at redde arken",
 				"goto": "default_choice3",
 				"choice_points": -25
 			},
@@ -67,7 +67,7 @@
 				"choice_points": 25
 			},
 			{
-				"Text": "Han vidste bedre end at røre ved din ark, du brænder ham op på stedet",
+				"Text": "Han burde have vidst bedre end at røre ved din ark, du brænder ham op på stedet",
 				"goto": "default_choice3",
 				"choice_points": 50
 			}
@@ -78,7 +78,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Ahh ja.. Klassisk"
+		"Text": "Ahh ja... Klassisk"
 	},
 	{
 		"Speaker": "Engel",
@@ -92,7 +92,7 @@
 	},
 	{
 		"Speaker": "Engel",
-		"Text": "Du er nu kommet igennem den tredje og sidste test."
+		"Text": "Du er nu kommet igennem den tredje og sidste test"
 	},
 	{
 		"Speaker": "Engel",
