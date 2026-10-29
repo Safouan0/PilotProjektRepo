@@ -704,7 +704,7 @@ collision_mask = 2
 shape = SubResource("WorldBoundaryShape2D_3sy6q")
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("9_1nev7")]
-position = Vector2(616, -336)
+position = Vector2(48, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1467817413]
 zoom = Vector2(3, 3)
