@@ -24,12 +24,12 @@
 			{
 			"Text": "Da det er forbudt at tænde ild, begynder det at storme og ilden går ud ", 
 			"goto": "default_choice2",
-			"choice_points": 20
+			"choice_points": 0
 			},
 			{
 			"Text": "Det er en kold nat; de får lov til at tænde ilden for at holde sig varme",
 			"goto": "default_choice2",
-			"choice_points": -20
+			"choice_points": -25
 			},
 			{
 			"Text": "De vidste godt de ikke måtte, så ilden vokser sig stor og fortærer dem levende", 
@@ -39,7 +39,7 @@
 			{
 			"Text": "Banditter i nærheden opdager ilden. De bliver berøvet for alt hvad de ejer", 
 			"goto": "default_choice2",
-			"choice_points": 50
+			"choice_points": 25
 			},
 		]
 	},
@@ -62,7 +62,7 @@
 	
 	{"Speaker": "Engel", "Text": "Lad vær med at fejle..."},
 	
-	{"Speaker": "Name1", "Text": "Indtil næste gang"},
+	{"Speaker": "Engel", "Text": "Indtil næste gang"},
 	
 	{"goto": "third_level_quiz"},
 	

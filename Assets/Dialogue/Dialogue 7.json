@@ -33,12 +33,12 @@
 			{
 			"Text": "Du belønner den loyale soldat med godt held resten af livet, for at rede arken", 
 			"goto": "default_choice3",
-			"choice_points": -20
+			"choice_points": -25
 			},
 			{
-			"Text": "Han er loyal, men han rørte ved arken. Du forbrænder den hånd der rørte arken",
+			"Text": "Han er loyal, men han rørte ved arken. Du forkuller den hånd der rørte arken",
 			"goto": "default_choice3",
-			"choice_points": 30
+			"choice_points": 25
 			},
 			{
 			"Text": "Han vidste bedre end at røre ved din ark, du brænder ham op på stedet", 
@@ -65,7 +65,7 @@
 	
 	{"Speaker": "Engel", "Text": "Du er 1/3 af vejen"},
 	
-	{"Speaker": "Name1", "Text": "Så længe vandrerer"},
+	{"Speaker": "Engel", "Text": "Så længe vandrerer"},
 	
 	{"goto": "fourth_level_quiz"},
 ]
