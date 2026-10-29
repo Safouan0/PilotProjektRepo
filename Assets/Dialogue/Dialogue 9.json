@@ -5,12 +5,6 @@
 	
 	{"Speaker": "Engel", "Text": "Du har nu kæmpet dig op fra den nederste ring af helvede, men du er ikke færdig endnu"},
 	
-	{"Speaker": "Engel", "Text": "For at komme hjem skal du først igennem alle ni ringe af helvede, og bevise dit værd på vejen"},
-	
-	{"Speaker": "Engel", "Text": "Du bliver testet undervejs på din rejse, og hvis du bliver fundet værdig, så får du adgang til Paradis..."},
-	
-	{"Speaker": "Engel", "Text": "Hvis du derimod skulle fejle disse test, bliver du kastet til bunden igen"},
-	
 	{"Speaker": "Engel", "Text": "Er du klar til den første test?..."},
 	
 	{ "choice":
@@ -64,17 +58,17 @@
 			{
 			"Text": "Jeg forbander dem i Herrens navn, så deres puder altid er varme", 
 			"goto": "default_choice",
-			"choice_points": 10
+			"choice_points": 0
 			},
 			{
 			"Text": "Jeg vender den anden kind til og går videre",
 			"goto": "default_choice",
-			"choice_points": -20
+			"choice_points": -25
 			},
 			{
 			"Text": "Jeg samler en sten op og kaster den efter dem", 
 			"goto": "default_choice",
-			"choice_points": 20
+			"choice_points": 25
 			},
 			{
 			"Text": "Jeg forbander dem i Herrens navn; to bjørne lemlester de 41 børn", 
