@@ -1,15 +1,16 @@
 [gd_scene format=3 uid="uid://bakfwouqbvhpp"]
 
-[ext_resource type="Texture2D" uid="uid://bn54373tvdf3b" path="res://Assets/Backgrounds/End Background.png" id="1_u668n"]
-[ext_resource type="Texture2D" uid="uid://bxmvy2lj0v0eh" path="res://Assets/Dialogue/Options/Dialogue Option (Normal).png" id="2_28ir6"]
-[ext_resource type="Texture2D" uid="uid://cdgosqksmyvrl" path="res://Assets/Dialogue/Options/Dialogue Option (Clicked).png" id="3_6nqof"]
-[ext_resource type="Texture2D" uid="uid://dwr4dkjmg2rp7" path="res://Assets/Dialogue/Options/Dialogue Option (Hover).png" id="4_b8lvj"]
+[ext_resource type="Texture2D" uid="uid://duamtwjxe0t4r" path="res://Assets/Sprites/StartMenu/Startscreen.png" id="1_u668n"]
+[ext_resource type="FontFile" uid="uid://3lwq3u2ru1wg" path="res://Assets/Fonts/VCR_OSD_MONO_1.001.ttf" id="2_6nqof"]
+[ext_resource type="Texture2D" uid="uid://csubchng5j78y" path="res://Assets/Sprites/StartMenu/Startscreen Option (Normal).png" id="2_28ir6"]
+[ext_resource type="Texture2D" uid="uid://cb3vvqa8j3a47" path="res://Assets/Sprites/StartMenu/Startscreen Option (Clicked).png" id="3_6nqof"]
+[ext_resource type="Texture2D" uid="uid://cjtjooe0aan56" path="res://Assets/Sprites/StartMenu/Startscreen Option (Hover).png" id="4_b8lvj"]
 [ext_resource type="Script" uid="uid://d3mtj8xwmqxjc" path="res://Scripts/StartButton.cs" id="5_sj2jm"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3sy6q"]
 texture = ExtResource("2_28ir6")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2j6u4"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yu70f"]
 texture = ExtResource("3_6nqof")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fgskh"]
@@ -24,11 +25,22 @@ centered = false
 
 [node name="Button" type="Button" parent="." unique_id=1540866434]
 offset_left = 464.0
-offset_top = 336.0
+offset_top = 395.0
 offset_right = 816.0
-offset_bottom = 416.0
+offset_bottom = 475.0
+theme_override_fonts/font = ExtResource("2_6nqof")
+theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_3sy6q")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_2j6u4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yu70f")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fgskh")
 text = "Start"
 script = ExtResource("5_sj2jm")
+
+[node name="Label" type="Label" parent="." unique_id=753670262]
+offset_left = 32.0
+offset_top = 672.0
+offset_right = 342.0
+offset_bottom = 695.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_6nqof")
+text = "Af Julius, Katrine, Lisa og Sofus"
