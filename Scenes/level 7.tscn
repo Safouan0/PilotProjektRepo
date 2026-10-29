@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="11_n4mrr"]
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="12_mbr47"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="13_uviie"]
+[ext_resource type="PackedScene" uid="uid://bi2bewjxgv6c6" path="res://Scenes/IngameMenuButton.tscn" id="14_uwuob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dg8kd"]
 texture = ExtResource("3_1clf0")
@@ -284,3 +285,5 @@ dialog_path = "res://Assets/Dialogue/Dialogue 9.json"
 
 [node name="Angel" parent="Quiz" unique_id=1046493778 instance=ExtResource("13_uviie")]
 position = Vector2(213, -135)
+
+[node name="CanvasLayer" parent="." unique_id=952534706 instance=ExtResource("14_uwuob")]

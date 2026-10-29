@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="11_wwovu"]
 [ext_resource type="PackedScene" uid="uid://5ij4hsprqpnm" path="res://Scenes/saw.tscn" id="13_3thi4"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="13_wwovu"]
+[ext_resource type="PackedScene" uid="uid://bi2bewjxgv6c6" path="res://Scenes/IngameMenuButton.tscn" id="15_cdg6t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3thi4"]
 atlas = ExtResource("2_mjqxj")
@@ -767,3 +768,5 @@ position = Vector2(512, -176)
 
 [node name="Saw2" parent="Saws" unique_id=628237319 instance=ExtResource("13_3thi4")]
 position = Vector2(208, -192)
+
+[node name="CanvasLayer" parent="." unique_id=952534706 instance=ExtResource("15_cdg6t")]

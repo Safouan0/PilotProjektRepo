@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bi2bewjxgv6c6"]
+
+[ext_resource type="Script" uid="uid://b62a1p70divqc" path="res://Scenes/Button.cs" id="1_k1dwa"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=952534706]
+layer = 10
+
+[node name="Button" type="Button" parent="." unique_id=17270053]
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 56.0
+offset_bottom = 56.0
+script = ExtResource("1_k1dwa")
