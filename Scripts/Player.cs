@@ -10,8 +10,10 @@ public partial class Player : CharacterBody2D
 	static public bool hasCompletedQuiz = true;
 
 	public bool isLevitating = false;
+    public bool wasLevitating = false;
+    public bool isPlayingLevitationAnimation = false;
 
-	public float levitationStrength = 1.0f;
+    public float levitationStrength = 1.0f;
 
 	public bool isDead = false;
 
@@ -28,13 +30,15 @@ public partial class Player : CharacterBody2D
 		camera = GetNode<Camera2D>("Camera2D");
 		camera.ResetSmoothing();
 		camera.ForceUpdateScroll();
-		animatedSprite.FrameChanged += OnAnimationFrameChanged;
+        animatedSprite.AnimationFinished += OnAnimationFinished;
+        animatedSprite.FrameChanged += OnAnimationFrameChanged;
 	}
 
 	public override void _PhysicsProcess(double delta)
 	{
 		if (isDead || !hasCompletedQuiz)
 		{
+			isLevitating = false;
 			Velocity += GetGravity() * (float)delta;
 			MoveAndSlide();
 			return;
@@ -42,21 +46,26 @@ public partial class Player : CharacterBody2D
 
 		Vector2 velocity = Velocity;
 
-			 
-		// Add animation
-		if (!IsOnFloor())
-		{
-			animatedSprite.Animation = "Jumping";
 
-		}
-		else if (velocity.X > 0 || velocity.X < 0)
+        // Add animation
+        UpdateLevitationAnimation();
+        if (!isPlayingLevitationAnimation)
 		{
-			animatedSprite.Animation = "Walk";
 
-		}
-		else
-		{
-			animatedSprite.Animation = "Side idle";
+			if (!IsOnFloor())
+			{
+				animatedSprite.Play("Jumping");
+
+			}
+			else if (velocity.X > 0 || velocity.X < 0)
+			{
+				animatedSprite.Play("Walk");
+
+			}
+			else
+			{
+				animatedSprite.Play("Side idle");
+			}
 		}
 
 
@@ -89,7 +98,7 @@ public partial class Player : CharacterBody2D
 		if (isLevitating && levitationStrength != 0)
 		{
 			velocity.Y = 10.0f * -levitationStrength;
-		}
+        }
 
 		Velocity = velocity;
 		MoveAndSlide();
@@ -123,4 +132,41 @@ public partial class Player : CharacterBody2D
 		}
 	}
 
+	public void OnAnimationFinished()
+	{
+        if (isDead)
+        {
+            return;
+        }
+
+        if (animatedSprite.Animation == "Levitation start" && isLevitating)
+        {
+            animatedSprite.Play("Levitation loop");
+        }
+        else if (animatedSprite.Animation == "Levitation end" && !isLevitating)
+        {
+            isPlayingLevitationAnimation = false;
+        }
+    }
+
+	public void UpdateLevitationAnimation()
+	{
+        if (isLevitating == wasLevitating)
+        {
+            return;
+        }
+
+        wasLevitating = isLevitating;
+        
+		isPlayingLevitationAnimation = true;
+
+        if (isLevitating)
+        {
+            animatedSprite.Play("Levitation start");
+        }
+        else
+        {
+            animatedSprite.Play("Levitation end");
+        }
+    }
 }
