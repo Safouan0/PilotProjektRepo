@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://i3kw3sjcpv2q"]
 
-[ext_resource type="Texture2D" uid="uid://bsi1drfy7df3j" path="res://Assets/Backgrounds/End Background Final.png" id="1_sxgjw"]
+[ext_resource type="Texture2D" uid="uid://ba613ta86tsxn" path="res://Assets/Backgrounds/End Background FinalText.png" id="1_sxgjw"]
 [ext_resource type="Texture2D" uid="uid://cnj72eph6c5va" path="res://Assets/Sprites/End level/Logos-2.png.png" id="2_sxgjw"]
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="3_2gonq"]
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="4_wctei"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="5_0rbow"]
 [ext_resource type="PackedScene" uid="uid://d2bea7nca4diq" path="res://Scenes/winzone.tscn" id="6_oen81"]
+[ext_resource type="Texture2D" uid="uid://cmtdaxwcux181" path="res://Assets/Sprites/End level/End Front Cloud.png" id="7_44jhl"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
 
@@ -94,7 +95,7 @@ texture = ExtResource("2_sxgjw")
 centered = false
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("3_2gonq")]
-position = Vector2(47, -62)
+position = Vector2(204, -63)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=439768462]
 zoom = Vector2(3.2, 3.2)
@@ -106,7 +107,6 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("4_wctei")]
-visible = false
 position = Vector2(16, -112)
 dialog_path = "res://Assets/Dialogue/Dialogue 2.json"
 
@@ -154,3 +154,8 @@ scale = Vector2(1.25, 1.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=659814115]
 shape = SubResource("SegmentShape2D_3sy6q")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1217033266]
+position = Vector2(199.99992, -112.00004)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("7_44jhl")
