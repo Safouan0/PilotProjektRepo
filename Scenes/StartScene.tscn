@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cjtjooe0aan56" path="res://Assets/Sprites/StartMenu/Startscreen Option (Hover).png" id="4_b8lvj"]
 [ext_resource type="Script" uid="uid://d3mtj8xwmqxjc" path="res://Scripts/StartButton.cs" id="5_sj2jm"]
 [ext_resource type="Script" uid="uid://bdpplhlhqr7n3" path="res://Scenes/Button2.cs" id="7_6nqof"]
+[ext_resource type="Script" uid="uid://dr33eupk350jp" path="res://Scenes/Button3.cs" id="8_b8lvj"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3sy6q"]
 texture = ExtResource("2_28ir6")
@@ -24,11 +25,12 @@ scale = Vector2(4, 4)
 texture = ExtResource("1_u668n")
 centered = false
 
-[node name="Button" type="Button" parent="." unique_id=1540866434]
-offset_left = 464.0
-offset_top = 395.0
-offset_right = 816.0
-offset_bottom = 475.0
+[node name="MenuButtons" type="Node2D" parent="." unique_id=1136810153]
+position = Vector2(464, 357)
+
+[node name="Button" type="Button" parent="MenuButtons" unique_id=1540866434]
+offset_right = 352.0
+offset_bottom = 80.0
 theme_override_fonts/font = ExtResource("2_6nqof")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_3sy6q")
@@ -37,11 +39,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_fgskh")
 text = "Start"
 script = ExtResource("5_sj2jm")
 
-[node name="Button2" type="Button" parent="." unique_id=1082434099]
-offset_left = 464.0
-offset_top = 494.0
-offset_right = 816.0
-offset_bottom = 574.0
+[node name="Button2" type="Button" parent="MenuButtons" unique_id=1082434099]
+offset_top = 100.0
+offset_right = 352.0
+offset_bottom = 180.0
 theme_override_fonts/font = ExtResource("2_6nqof")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/normal = SubResource("StyleBoxTexture_3sy6q")
@@ -49,6 +50,18 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_yu70f")
 theme_override_styles/hover = SubResource("StyleBoxTexture_fgskh")
 text = "Normal Mode"
 script = ExtResource("7_6nqof")
+
+[node name="Button3" type="Button" parent="MenuButtons" unique_id=1364431874]
+offset_top = 200.0
+offset_right = 352.0
+offset_bottom = 280.0
+theme_override_fonts/font = ExtResource("2_6nqof")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxTexture_3sy6q")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yu70f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_fgskh")
+text = "Quit"
+script = ExtResource("8_b8lvj")
 
 [node name="Label" type="Label" parent="." unique_id=753670262]
 offset_left = 32.0
