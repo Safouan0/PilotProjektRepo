@@ -1,6 +1,18 @@
 [gd_scene format=3 uid="uid://bi2bewjxgv6c6"]
 
 [ext_resource type="Script" uid="uid://b62a1p70divqc" path="res://Scenes/Button.cs" id="1_k1dwa"]
+[ext_resource type="Texture2D" uid="uid://dojy06qfdafx4" path="res://Assets/Sprites/Knapper/Base Knap (Normal).png" id="1_mfq5i"]
+[ext_resource type="Texture2D" uid="uid://dtinym1domvau" path="res://Assets/Sprites/Knapper/Base Knap (Clicked).png" id="2_13lj0"]
+[ext_resource type="Texture2D" uid="uid://do87wsya64fbi" path="res://Assets/Sprites/Knapper/Base Knap (Hover).png" id="3_pgp3r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_44jhl"]
+texture = ExtResource("1_mfq5i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3sy6q"]
+texture = ExtResource("2_13lj0")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w11f4"]
+texture = ExtResource("3_pgp3r")
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=952534706]
 layer = 10
@@ -10,4 +22,7 @@ offset_left = 16.0
 offset_top = 16.0
 offset_right = 56.0
 offset_bottom = 56.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_44jhl")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3sy6q")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w11f4")
 script = ExtResource("1_k1dwa")
