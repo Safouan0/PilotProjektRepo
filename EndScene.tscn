@@ -7,12 +7,25 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
 
+[sub_resource type="Animation" id="Animation_xckxy"]
+resource_name = "shake"
+length = 0.19999999999999998
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_34l3g"]
+_data = {
+&"shake": SubResource("Animation_xckxy")
+}
+
 [node name="Node2D" type="Node2D" unique_id=629504717]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1845202053]
 position = Vector2(0, -225)
 scale = Vector2(1.25, 1.25)
 texture = ExtResource("1_xckxy")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=248710274]
+scale = Vector2(0.79999995, 0.79999995)
 centered = false
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_dwrsa")]
@@ -28,6 +41,7 @@ limit_smoothed = true
 position_smoothing_enabled = true
 
 [node name="Quiz" parent="." unique_id=477676082 instance=ExtResource("2_xckxy")]
+visible = false
 position = Vector2(16, -112)
 dialog_path = "res://Assets/Dialogue/Dialogue 2.json"
 
@@ -39,3 +53,6 @@ position = Vector2(0, -20)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1249191717]
 shape = SubResource("WorldBoundaryShape2D_3sy6q")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=73905965]
+libraries/ = SubResource("AnimationLibrary_34l3g")
