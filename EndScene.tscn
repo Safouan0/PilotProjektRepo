@@ -2,17 +2,70 @@
 
 [ext_resource type="PackedScene" uid="uid://djkxkyw53adqv" path="res://Scenes/player.tscn" id="1_dwrsa"]
 [ext_resource type="Texture2D" uid="uid://bn54373tvdf3b" path="res://Assets/Backgrounds/End Background.png" id="1_xckxy"]
+[ext_resource type="Texture2D" uid="uid://bls0iduomns05" path="res://Assets/Dialogue/Dialogue box/Dialogue Name.png" id="2_34l3g"]
 [ext_resource type="PackedScene" uid="uid://ca1tv43qfh631" path="res://Scenes/quiz.tscn" id="2_xckxy"]
 [ext_resource type="PackedScene" uid="uid://dr2a32m6l0qkh" path="res://Scenes/angel.tscn" id="3_34l3g"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_3sy6q"]
 
+[sub_resource type="Animation" id="Animation_34l3g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_xckxy"]
 resource_name = "shake"
-length = 0.19999999999999998
+length = 1.8666667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35000002, 0.4, 0.43333334, 0.48333335, 0.53333336, 0.5833334, 0.6333333, 0.68333334, 0.73333335, 0.78333336, 0.8333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0), Vector2(-4, 2), Vector2(4, -2), Vector2(-2, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D/Sprite2D2:self_modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.96666664, 1.79),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_34l3g"]
 _data = {
+&"RESET": SubResource("Animation_34l3g"),
 &"shake": SubResource("Animation_xckxy")
 }
 
@@ -25,7 +78,9 @@ texture = ExtResource("1_xckxy")
 centered = false
 
 [node name="Sprite2D2" type="Sprite2D" parent="Sprite2D" unique_id=248710274]
-scale = Vector2(0.79999995, 0.79999995)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(138.40001, 40.8)
+texture = ExtResource("2_34l3g")
 centered = false
 
 [node name="Player" parent="." unique_id=1657756045 instance=ExtResource("1_dwrsa")]
